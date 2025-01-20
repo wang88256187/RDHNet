@@ -1,0 +1,1525 @@
+[INFO 16:50:59] pymarl Running command 'my_main'
+[INFO 16:50:59] pymarl Started run with ID "89"
+[DEBUG 16:50:59] pymarl Starting Heartbeat
+[DEBUG 16:50:59] my_main Started
+[INFO 16:50:59] my_main Experiment Parameters:
+[INFO 16:50:59] my_main 
+
+{   'act_noise': 0.1,
+    'action_range': None,
+    'action_selector': None,
+    'agent': 'rdhnet',
+    'agent_output_type': 'q',
+    'agent_view_radius': 1.5,
+    'batch_size': 32,
+    'batch_size_run': 1,
+    'buffer_algo': None,
+    'buffer_chunk_size': None,
+    'buffer_cpu_only': True,
+    'buffer_device': None,
+    'buffer_mode': 'transitions',
+    'buffer_size': 5000,
+    'buffer_warmup': 0,
+    'checkpoint_path': '',
+    'continuous_actions': False,
+    'critic_lr': None,
+    'debug': False,
+    'double_q': False,
+    'env': 'mpe',
+    'env_args': {   'benchmark': False,
+                    'episode_limit': 25,
+                    'scenario_name': 'simple_spread_3a',
+                    'seed': 0},
+    'epsilon_anneal_time': None,
+    'epsilon_decay_mode': None,
+    'epsilon_finish': None,
+    'epsilon_start': None,
+    'evaluate': False,
+    'exploration_mode': 'gaussian',
+    'final_ou_noise_scale': 0.0,
+    'gamma': 0.85,
+    'gated': False,
+    'grad_norm_clip': 0.5,
+    'hyper_initialization_nonzeros': 0,
+    'hypernet_embed': 64,
+    'hypernet_layers': 2,
+    'label': 'default_label',
+    'learn_interval': 100,
+    'learner': 'cq_learner',
+    'learner_log_interval': 2000,
+    'load_step': 0,
+    'local_results_path': 'results',
+    'log_interval': 2000,
+    'lr': 0.01,
+    'mac': 'cqmix_mac',
+    'max_nums_refer_agent': 1,
+    'mixer': 'qmix',
+    'mixing_embed_dim': 64,
+    'n_runners': None,
+    'n_train': 1,
+    'name': 'rdhnet_pp',
+    'obs_agent_id': False,
+    'obs_last_action': False,
+    'optim_alpha': 0.99,
+    'optim_eps': 1e-05,
+    'optimizer': 'adam',
+    'optimizer_epsilon': 0.01,
+    'ou_noise_scale': 0.3,
+    'ou_sigma': 0.2,
+    'ou_stop_episode': 100,
+    'ou_theta': 0.15,
+    'plot_loss_network': False,
+    'recurrent_critic': False,
+    'repeat_id': 1,
+    'rnn_hidden_dim': 64,
+    'run_mode': None,
+    'runner': 'episode',
+    'runner_log_interval': 2000,
+    'runner_scope': 'episodic',
+    'save_model': False,
+    'save_model_interval': 10000,
+    'save_replay': False,
+    'seed': 0,
+    'skip_connections': False,
+    'start_steps': 0,
+    't_max': 310000,
+    'target_update_interval': 200,
+    'target_update_mode': 'soft',
+    'target_update_tau': 0.001,
+    'test_greedy': True,
+    'test_interval': 2000,
+    'test_nepisode': 10,
+    'testing_on': True,
+    'use_buffer_compression': False,
+    'use_cuda': True,
+    'use_pomdp': True,
+    'use_tensorboard': False,
+    'use_wandb': True,
+    'user_name': 'dongzi',
+    'verbose': False,
+    'weight_decay': True,
+    'weight_decay_factor': 0.0001}
+
+目录已存在！
+[DEBUG 16:50:59] wandb.sdk.lib.git git repository is invalid
+[DEBUG 16:50:59] urllib3.connectionpool Starting new HTTPS connection (1): api.wandb.ai:443
+[DEBUG 16:51:00] urllib3.connectionpool https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+[DEBUG 16:51:00] urllib3.connectionpool Starting new HTTPS connection (1): api.wandb.ai:443
+[DEBUG 16:51:00] urllib3.connectionpool https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+wandb: Currently logged in as: dongzi (use `wandb login --relogin` to force relogin)
+2025-01-16 16:51:02.559551: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-01-16 16:51:03.107248: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cuda/lib64:/usr/local/cuda/lib64
+2025-01-16 16:51:03.107330: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cuda/lib64:/usr/local/cuda/lib64
+2025-01-16 16:51:03.107340: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+wandb: wandb version 0.19.3 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.12.11
+wandb: Run data is saved locally in /home/wangdongzi/Desktop/RDHNet/RDHNet_revise/RDHNet_0116/results/wandb_logs/wandb/run-20250116_165100-3p6b03fj
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run POMDP_seed0_1r_rdhnet_pp__2025-01-16_16-50-59
+wandb: ⭐️ View project at https://wandb.ai/dongzi/IRMARL
+wandb: 🚀 View run at https://wandb.ai/dongzi/IRMARL/runs/3p6b03fj
+/home/wangdongzi/miniconda3/envs/marl/lib/python3.7/site-packages/matplotlib/__init__.py:886: MatplotlibDeprecationWarning: 
+examples.directory is deprecated; in the future, examples will be found relative to the 'datapath' directory.
+  "found relative to the 'datapath' directory.".format(key))
+[DEBUG 16:51:06] matplotlib CACHEDIR=/home/wangdongzi/.cache/matplotlib
+[DEBUG 16:51:06] matplotlib.font_manager Using fontManager instance from /home/wangdongzi/.cache/matplotlib/fontlist-v300.json
+[DEBUG 16:51:06] matplotlib.pyplot Loaded backend module://backend_interagg version unknown.
+[33mWARN: gym.spaces.Box autodetected dtype as <class 'numpy.float32'>. Please provide explicit dtype.[0m
+[33mWARN: gym.spaces.Box autodetected dtype as <class 'numpy.float32'>. Please provide explicit dtype.[0m
+[33mWARN: gym.spaces.Box autodetected dtype as <class 'numpy.float32'>. Please provide explicit dtype.[0m
+[33mWARN: gym.spaces.Box autodetected dtype as <class 'numpy.float32'>. Please provide explicit dtype.[0m
+[33mWARN: gym.spaces.Box autodetected dtype as <class 'numpy.float32'>. Please provide explicit dtype.[0m
+[33mWARN: gym.spaces.Box autodetected dtype as <class 'numpy.float32'>. Please provide explicit dtype.[0m
+[INFO 16:51:07] my_main Beginning training for 310000 timesteps
+/home/wangdongzi/Desktop/RDHNet/RDHNet_revise/RDHNet_0116/src/components/episode_buffer.py:111: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  v = th.tensor(v, dtype=dtype, device=self.device)
+[INFO 16:51:07] my_main t_env: 25 / 310000
+[INFO 16:51:07] my_main Estimated time left: 1 minutes, 27 seconds. Time passed: 0 seconds
+[INFO 16:51:40] my_main Recent Stats | t_env:       2000 | Episode:       80
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                48.2959	loss:                     10.3641
+min_dists_mean_mean:       1.0124	mind_dist__agent0_mean:    0.4017	mind_dist__agent1_mean:    1.6406	mind_dist__agent2_mean:    0.9949
+q_taken_mean:             -0.9963	return_mean:             -62.8786	return_std:                0.0000	target_mean:             -27.0679
+td_error_abs:             78.2149	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  1.0219
+test_mind_dist__agent0_mean:  1.1760	test_mind_dist__agent1_mean:  0.9955	test_mind_dist__agent2_mean:  0.8943	test_return_mean:        -78.6864
+test_return_std:           9.2307	weight_norm:              56.1189	
+[INFO 16:51:40] my_main t_env: 2025 / 310000
+[INFO 16:51:40] my_main Estimated time left: 1 hours, 24 minutes, 56 seconds. Time passed: 33 seconds
+[INFO 16:52:29] my_main Recent Stats | t_env:       4000 | Episode:      160
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                24.8706	loss:                      5.2722
+min_dists_mean_mean:       0.9361	mind_dist__agent0_mean:    0.6344	mind_dist__agent1_mean:    1.2193	mind_dist__agent2_mean:    0.9545
+q_taken_mean:            -14.8494	return_mean:             -70.4273	return_std:                7.7763	target_mean:             -27.8063
+td_error_abs:             42.9274	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.8411
+test_mind_dist__agent0_mean:  0.8810	test_mind_dist__agent1_mean:  0.8613	test_mind_dist__agent2_mean:  0.7809	test_return_mean:        -72.7794
+test_return_std:           9.4837	weight_norm:              56.1188	
+[INFO 16:52:30] my_main t_env: 4025 / 310000
+[INFO 16:52:30] my_main Estimated time left: 2 hours, 6 minutes, 12 seconds. Time passed: 1 minutes, 23 seconds
+[INFO 16:53:19] my_main Recent Stats | t_env:       6000 | Episode:      240
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                17.4791	loss:                      3.5660
+min_dists_mean_mean:       0.7571	mind_dist__agent0_mean:    0.5519	mind_dist__agent1_mean:    0.9441	mind_dist__agent2_mean:    0.7753
+q_taken_mean:            -19.9809	return_mean:             -70.3030	return_std:               12.1408	target_mean:             -28.2246
+td_error_abs:             31.0956	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.6658
+test_mind_dist__agent0_mean:  0.7227	test_mind_dist__agent1_mean:  0.6286	test_mind_dist__agent2_mean:  0.6461	test_return_mean:        -68.5801
+test_return_std:          12.5903	weight_norm:              56.1240	
+[INFO 16:53:20] my_main t_env: 6025 / 310000
+[INFO 16:53:20] my_main Estimated time left: 2 hours, 6 minutes, 17 seconds. Time passed: 2 minutes, 13 seconds
+[INFO 16:54:08] my_main Recent Stats | t_env:       8000 | Episode:      320
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                13.3867	loss:                      2.6993
+min_dists_mean_mean:       0.7073	mind_dist__agent0_mean:    0.5431	mind_dist__agent1_mean:    0.8645	mind_dist__agent2_mean:    0.7143
+q_taken_mean:            -22.6356	return_mean:             -70.0934	return_std:               13.7045	target_mean:             -28.8226
+td_error_abs:             24.8029	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.6152
+test_mind_dist__agent0_mean:  0.6786	test_mind_dist__agent1_mean:  0.5611	test_mind_dist__agent2_mean:  0.6058	test_return_mean:        -66.3684
+test_return_std:          12.3328	weight_norm:              56.1322	
+[INFO 16:54:09] my_main t_env: 8025 / 310000
+[INFO 16:54:09] my_main Estimated time left: 2 hours, 3 minutes, 51 seconds. Time passed: 3 minutes, 2 seconds
+[INFO 16:54:58] my_main Recent Stats | t_env:      10000 | Episode:      400
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                11.1376	loss:                      2.1813
+min_dists_mean_mean:       0.6816	mind_dist__agent0_mean:    0.5476	mind_dist__agent1_mean:    0.8107	mind_dist__agent2_mean:    0.6866
+q_taken_mean:            -24.3181	return_mean:             -70.0824	return_std:               14.8173	target_mean:             -29.0481
+td_error_abs:             21.1432	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.6262
+test_mind_dist__agent0_mean:  0.6665	test_mind_dist__agent1_mean:  0.5802	test_mind_dist__agent2_mean:  0.6318	test_return_mean:        -69.6426
+test_return_std:          13.2111	weight_norm:              56.1409	
+[INFO 16:54:58] my_main t_env: 10025 / 310000
+[INFO 16:54:58] my_main Estimated time left: 2 hours, 4 minutes, 3 seconds. Time passed: 3 minutes, 51 seconds
+[INFO 16:55:48] my_main Recent Stats | t_env:      12000 | Episode:      480
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 1.7353	loss:                      0.1318
+min_dists_mean_mean:       0.6025	mind_dist__agent0_mean:    0.5945	mind_dist__agent1_mean:    0.6016	mind_dist__agent2_mean:    0.6115
+q_taken_mean:            -30.4220	return_mean:             -71.6604	return_std:               17.9780	target_mean:             -29.9784
+td_error_abs:              6.8033	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.5485
+test_mind_dist__agent0_mean:  0.5767	test_mind_dist__agent1_mean:  0.5346	test_mind_dist__agent2_mean:  0.5341	test_return_mean:        -66.6910
+test_return_std:          15.3908	weight_norm:              56.1556	
+[INFO 16:55:49] my_main t_env: 12025 / 310000
+[INFO 16:55:49] my_main Estimated time left: 2 hours, 4 minutes, 38 seconds. Time passed: 4 minutes, 42 seconds
+[INFO 16:56:38] my_main Recent Stats | t_env:      14000 | Episode:      560
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 1.9513	loss:                      0.1374
+min_dists_mean_mean:       0.5384	mind_dist__agent0_mean:    0.5372	mind_dist__agent1_mean:    0.5442	mind_dist__agent2_mean:    0.5339
+q_taken_mean:            -31.2598	return_mean:             -69.3813	return_std:               17.8157	target_mean:             -30.6217
+td_error_abs:              6.9913	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.5062
+test_mind_dist__agent0_mean:  0.5351	test_mind_dist__agent1_mean:  0.5087	test_mind_dist__agent2_mean:  0.4748	test_return_mean:        -66.0011
+test_return_std:          15.4003	weight_norm:              56.1733	
+[INFO 16:56:39] my_main t_env: 14025 / 310000
+[INFO 16:56:39] my_main Estimated time left: 2 hours, 3 minutes, 57 seconds. Time passed: 5 minutes, 32 seconds
+[INFO 16:57:28] my_main Recent Stats | t_env:      16000 | Episode:      640
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 1.5758	loss:                      0.1237
+min_dists_mean_mean:       0.5680	mind_dist__agent0_mean:    0.5645	mind_dist__agent1_mean:    0.5810	mind_dist__agent2_mean:    0.5586
+q_taken_mean:            -32.2638	return_mean:             -68.9298	return_std:               16.8223	target_mean:             -31.8609
+td_error_abs:              6.6426	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.5550
+test_mind_dist__agent0_mean:  0.5766	test_mind_dist__agent1_mean:  0.5943	test_mind_dist__agent2_mean:  0.4940	test_return_mean:        -66.8124
+test_return_std:          14.0369	weight_norm:              56.1918	
+[INFO 16:57:29] my_main t_env: 16025 / 310000
+[INFO 16:57:29] my_main Estimated time left: 2 hours, 2 minutes, 22 seconds. Time passed: 6 minutes, 22 seconds
+[INFO 16:58:18] my_main Recent Stats | t_env:      18000 | Episode:      720
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 1.7022	loss:                      0.1358
+min_dists_mean_mean:       0.5639	mind_dist__agent0_mean:    0.5709	mind_dist__agent1_mean:    0.5626	mind_dist__agent2_mean:    0.5582
+q_taken_mean:            -33.2972	return_mean:             -69.1788	return_std:               16.8483	target_mean:             -32.8125
+td_error_abs:              6.9584	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.5311
+test_mind_dist__agent0_mean:  0.5284	test_mind_dist__agent1_mean:  0.5970	test_mind_dist__agent2_mean:  0.4678	test_return_mean:        -67.8177
+test_return_std:          13.8829	weight_norm:              56.2102	
+[INFO 16:58:19] my_main t_env: 18025 / 310000
+[INFO 16:58:19] my_main Estimated time left: 2 hours, 1 minutes, 58 seconds. Time passed: 7 minutes, 12 seconds
+[INFO 16:59:09] my_main Recent Stats | t_env:      20000 | Episode:      800
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 1.4961	loss:                      0.1311
+min_dists_mean_mean:       0.5458	mind_dist__agent0_mean:    0.5595	mind_dist__agent1_mean:    0.5424	mind_dist__agent2_mean:    0.5355
+q_taken_mean:            -34.3583	return_mean:             -68.5999	return_std:               16.2323	target_mean:             -34.1692
+td_error_abs:              6.7668	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.5048
+test_mind_dist__agent0_mean:  0.5113	test_mind_dist__agent1_mean:  0.5685	test_mind_dist__agent2_mean:  0.4346	test_return_mean:        -65.5798
+test_return_std:          13.0001	weight_norm:              56.2283	
+[INFO 16:59:09] my_main t_env: 20025 / 310000
+[INFO 16:59:09] my_main Estimated time left: 2 hours, 1 minutes, 29 seconds. Time passed: 8 minutes, 2 seconds
+[INFO 17:00:01] my_main Recent Stats | t_env:      22000 | Episode:      880
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 1.5130	loss:                      0.1364
+min_dists_mean_mean:       0.5114	mind_dist__agent0_mean:    0.5225	mind_dist__agent1_mean:    0.5055	mind_dist__agent2_mean:    0.5061
+q_taken_mean:            -35.7651	return_mean:             -67.5629	return_std:               16.2333	target_mean:             -35.4326
+td_error_abs:              6.9752	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.4586
+test_mind_dist__agent0_mean:  0.4874	test_mind_dist__agent1_mean:  0.4624	test_mind_dist__agent2_mean:  0.4260	test_return_mean:        -63.9927
+test_return_std:          12.2599	weight_norm:              56.2480	
+[INFO 17:00:02] my_main t_env: 22025 / 310000
+[INFO 17:00:02] my_main Estimated time left: 2 hours, 6 minutes, 28 seconds. Time passed: 8 minutes, 55 seconds
+[INFO 17:00:52] my_main Recent Stats | t_env:      24000 | Episode:      960
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 1.4243	loss:                      0.1209
+min_dists_mean_mean:       0.4944	mind_dist__agent0_mean:    0.5134	mind_dist__agent1_mean:    0.4837	mind_dist__agent2_mean:    0.4862
+q_taken_mean:            -37.3126	return_mean:             -67.2004	return_std:               16.4925	target_mean:             -36.9637
+td_error_abs:              6.7360	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.4701
+test_mind_dist__agent0_mean:  0.5465	test_mind_dist__agent1_mean:  0.4280	test_mind_dist__agent2_mean:  0.4357	test_return_mean:        -65.7529
+test_return_std:          13.4556	weight_norm:              56.2693	
+[INFO 17:00:53] my_main t_env: 24025 / 310000
+[INFO 17:00:53] my_main Estimated time left: 2 hours, 1 minutes, 14 seconds. Time passed: 9 minutes, 46 seconds
+[INFO 17:01:42] my_main Recent Stats | t_env:      26000 | Episode:     1040
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 1.5409	loss:                      0.1277
+min_dists_mean_mean:       0.4709	mind_dist__agent0_mean:    0.5064	mind_dist__agent1_mean:    0.4451	mind_dist__agent2_mean:    0.4612
+q_taken_mean:            -38.9973	return_mean:             -66.1839	return_std:               15.8071	target_mean:             -38.5405
+td_error_abs:              6.9925	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.4184
+test_mind_dist__agent0_mean:  0.4666	test_mind_dist__agent1_mean:  0.3797	test_mind_dist__agent2_mean:  0.4089	test_return_mean:        -62.5701
+test_return_std:          12.0639	weight_norm:              56.2906	
+[INFO 17:01:43] my_main t_env: 26025 / 310000
+[INFO 17:01:43] my_main Estimated time left: 1 hours, 58 minutes, 36 seconds. Time passed: 10 minutes, 36 seconds
+[INFO 17:02:33] my_main Recent Stats | t_env:      28000 | Episode:     1120
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 1.4800	loss:                      0.1310
+min_dists_mean_mean:       0.4488	mind_dist__agent0_mean:    0.4870	mind_dist__agent1_mean:    0.4249	mind_dist__agent2_mean:    0.4345
+q_taken_mean:            -40.1300	return_mean:             -64.8071	return_std:               15.2604	target_mean:             -39.8762
+td_error_abs:              7.1582	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.4560
+test_mind_dist__agent0_mean:  0.4676	test_mind_dist__agent1_mean:  0.4375	test_mind_dist__agent2_mean:  0.4630	test_return_mean:        -63.5242
+test_return_std:          13.0666	weight_norm:              56.3113	
+[INFO 17:02:33] my_main t_env: 28025 / 310000
+[INFO 17:02:33] my_main Estimated time left: 1 hours, 58 minutes, 1 seconds. Time passed: 11 minutes, 26 seconds
+[INFO 17:03:24] my_main Recent Stats | t_env:      30000 | Episode:     1200
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 1.5867	loss:                      0.1436
+min_dists_mean_mean:       0.4346	mind_dist__agent0_mean:    0.4784	mind_dist__agent1_mean:    0.4047	mind_dist__agent2_mean:    0.4206
+q_taken_mean:            -41.1163	return_mean:             -63.8827	return_std:               15.1672	target_mean:             -40.7472
+td_error_abs:              7.5976	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.4358
+test_mind_dist__agent0_mean:  0.4634	test_mind_dist__agent1_mean:  0.4063	test_mind_dist__agent2_mean:  0.4377	test_return_mean:        -61.6335
+test_return_std:          13.1158	weight_norm:              56.3338	
+[INFO 17:03:24] my_main t_env: 30025 / 310000
+[INFO 17:03:24] my_main Estimated time left: 1 hours, 59 minutes, 1 seconds. Time passed: 12 minutes, 17 seconds
+[INFO 17:04:17] my_main Recent Stats | t_env:      32000 | Episode:     1280
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 1.7143	loss:                      0.1540
+min_dists_mean_mean:       0.4240	mind_dist__agent0_mean:    0.4788	mind_dist__agent1_mean:    0.3908	mind_dist__agent2_mean:    0.4023
+q_taken_mean:            -42.4302	return_mean:             -62.6429	return_std:               14.7645	target_mean:             -42.1315
+td_error_abs:              7.8197	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.4404
+test_mind_dist__agent0_mean:  0.4127	test_mind_dist__agent1_mean:  0.4315	test_mind_dist__agent2_mean:  0.4770	test_return_mean:        -63.7914
+test_return_std:          12.7761	weight_norm:              56.3564	
+[INFO 17:04:17] my_main t_env: 32025 / 310000
+[INFO 17:04:17] my_main Estimated time left: 2 hours, 2 minutes, 41 seconds. Time passed: 13 minutes, 10 seconds
+[INFO 17:05:08] my_main Recent Stats | t_env:      34000 | Episode:     1360
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.1107	loss:                      0.1749
+min_dists_mean_mean:       0.3856	mind_dist__agent0_mean:    0.4259	mind_dist__agent1_mean:    0.3662	mind_dist__agent2_mean:    0.3648
+q_taken_mean:            -43.5666	return_mean:             -61.1250	return_std:               14.3915	target_mean:             -43.1558
+td_error_abs:              8.2995	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.3680
+test_mind_dist__agent0_mean:  0.2932	test_mind_dist__agent1_mean:  0.3846	test_mind_dist__agent2_mean:  0.4261	test_return_mean:        -59.1208
+test_return_std:          12.7268	weight_norm:              56.3786	
+[INFO 17:05:08] my_main t_env: 34025 / 310000
+[INFO 17:05:08] my_main Estimated time left: 1 hours, 57 minutes, 54 seconds. Time passed: 14 minutes, 1 seconds
+[INFO 17:06:00] my_main Recent Stats | t_env:      36000 | Episode:     1440
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.1635	loss:                      0.1727
+min_dists_mean_mean:       0.3447	mind_dist__agent0_mean:    0.3788	mind_dist__agent1_mean:    0.3380	mind_dist__agent2_mean:    0.3174
+q_taken_mean:            -43.1405	return_mean:             -60.3925	return_std:               15.0671	target_mean:             -43.0246
+td_error_abs:              8.1579	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.3545
+test_mind_dist__agent0_mean:  0.3108	test_mind_dist__agent1_mean:  0.3329	test_mind_dist__agent2_mean:  0.4199	test_return_mean:        -61.0413
+test_return_std:          14.7961	weight_norm:              56.4006	
+[INFO 17:06:00] my_main t_env: 36025 / 310000
+[INFO 17:06:00] my_main Estimated time left: 1 hours, 58 minutes, 7 seconds. Time passed: 14 minutes, 53 seconds
+[INFO 17:06:51] my_main Recent Stats | t_env:      38000 | Episode:     1520
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.2708	loss:                      0.1818
+min_dists_mean_mean:       0.2994	mind_dist__agent0_mean:    0.3277	mind_dist__agent1_mean:    0.2956	mind_dist__agent2_mean:    0.2750
+q_taken_mean:            -43.8456	return_mean:             -59.4029	return_std:               15.1274	target_mean:             -43.5683
+td_error_abs:              8.3553	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.3016
+test_mind_dist__agent0_mean:  0.3092	test_mind_dist__agent1_mean:  0.2532	test_mind_dist__agent2_mean:  0.3423	test_return_mean:        -60.3353
+test_return_std:          17.4280	weight_norm:              56.4232	
+[INFO 17:06:52] my_main t_env: 38025 / 310000
+[INFO 17:06:52] my_main Estimated time left: 1 hours, 56 minutes, 37 seconds. Time passed: 15 minutes, 45 seconds
+[INFO 17:07:42] my_main Recent Stats | t_env:      40000 | Episode:     1600
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.3813	loss:                      0.1802
+min_dists_mean_mean:       0.2854	mind_dist__agent0_mean:    0.3012	mind_dist__agent1_mean:    0.2906	mind_dist__agent2_mean:    0.2643
+q_taken_mean:            -44.5184	return_mean:             -59.1845	return_std:               15.6967	target_mean:             -43.9875
+td_error_abs:              8.2900	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.2791
+test_mind_dist__agent0_mean:  0.2576	test_mind_dist__agent1_mean:  0.2879	test_mind_dist__agent2_mean:  0.2918	test_return_mean:        -60.5093
+test_return_std:          18.5986	weight_norm:              56.4454	
+[INFO 17:07:43] my_main t_env: 40025 / 310000
+[INFO 17:07:43] my_main Estimated time left: 1 hours, 55 minutes, 34 seconds. Time passed: 16 minutes, 36 seconds
+[INFO 17:08:35] my_main Recent Stats | t_env:      42000 | Episode:     1680
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.6059	loss:                      0.1966
+min_dists_mean_mean:       0.2736	mind_dist__agent0_mean:    0.2888	mind_dist__agent1_mean:    0.2770	mind_dist__agent2_mean:    0.2549
+q_taken_mean:            -44.6256	return_mean:             -58.6453	return_std:               16.3048	target_mean:             -44.0089
+td_error_abs:              8.4566	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.2476
+test_mind_dist__agent0_mean:  0.2470	test_mind_dist__agent1_mean:  0.2430	test_mind_dist__agent2_mean:  0.2528	test_return_mean:        -59.5331
+test_return_std:          20.1495	weight_norm:              56.4667	
+[INFO 17:08:35] my_main t_env: 42025 / 310000
+[INFO 17:08:35] my_main Estimated time left: 1 hours, 56 minutes, 36 seconds. Time passed: 17 minutes, 28 seconds
+[INFO 17:09:26] my_main Recent Stats | t_env:      44000 | Episode:     1760
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.2626	loss:                      0.1848
+min_dists_mean_mean:       0.2842	mind_dist__agent0_mean:    0.2889	mind_dist__agent1_mean:    0.2837	mind_dist__agent2_mean:    0.2801
+q_taken_mean:            -45.4502	return_mean:             -59.2259	return_std:               16.9181	target_mean:             -45.3852
+td_error_abs:              8.0949	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.2679
+test_mind_dist__agent0_mean:  0.2902	test_mind_dist__agent1_mean:  0.2386	test_mind_dist__agent2_mean:  0.2750	test_return_mean:        -59.6429
+test_return_std:          18.4117	weight_norm:              56.4866	
+[INFO 17:09:27] my_main t_env: 44025 / 310000
+[INFO 17:09:27] my_main Estimated time left: 1 hours, 54 minutes, 34 seconds. Time passed: 18 minutes, 20 seconds
+[INFO 17:10:17] my_main Recent Stats | t_env:      46000 | Episode:     1840
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.3380	loss:                      0.1941
+min_dists_mean_mean:       0.2928	mind_dist__agent0_mean:    0.3026	mind_dist__agent1_mean:    0.2850	mind_dist__agent2_mean:    0.2908
+q_taken_mean:            -47.1222	return_mean:             -58.7382	return_std:               17.3166	target_mean:             -46.6791
+td_error_abs:              8.3455	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.2837
+test_mind_dist__agent0_mean:  0.2808	test_mind_dist__agent1_mean:  0.2751	test_mind_dist__agent2_mean:  0.2952	test_return_mean:        -59.1420
+test_return_std:          18.1427	weight_norm:              56.5078	
+[INFO 17:10:18] my_main t_env: 46025 / 310000
+[INFO 17:10:18] my_main Estimated time left: 1 hours, 51 minutes, 56 seconds. Time passed: 19 minutes, 11 seconds
+[INFO 17:11:08] my_main Recent Stats | t_env:      48000 | Episode:     1920
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.1526	loss:                      0.1737
+min_dists_mean_mean:       0.3061	mind_dist__agent0_mean:    0.3276	mind_dist__agent1_mean:    0.2856	mind_dist__agent2_mean:    0.3050
+q_taken_mean:            -47.2141	return_mean:             -57.7069	return_std:               17.4274	target_mean:             -46.8326
+td_error_abs:              7.7843	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.2688
+test_mind_dist__agent0_mean:  0.2567	test_mind_dist__agent1_mean:  0.2745	test_mind_dist__agent2_mean:  0.2751	test_return_mean:        -55.9622
+test_return_std:          14.1682	weight_norm:              56.5286	
+[INFO 17:11:09] my_main t_env: 48025 / 310000
+[INFO 17:11:09] my_main Estimated time left: 1 hours, 51 minutes, 13 seconds. Time passed: 20 minutes, 2 seconds
+[INFO 17:12:00] my_main Recent Stats | t_env:      50000 | Episode:     2000
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.0493	loss:                      0.1771
+min_dists_mean_mean:       0.2867	mind_dist__agent0_mean:    0.3135	mind_dist__agent1_mean:    0.2623	mind_dist__agent2_mean:    0.2843
+q_taken_mean:            -48.0319	return_mean:             -56.3276	return_std:               16.2429	target_mean:             -47.9073
+td_error_abs:              7.7725	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.2450
+test_mind_dist__agent0_mean:  0.2497	test_mind_dist__agent1_mean:  0.1971	test_mind_dist__agent2_mean:  0.2883	test_return_mean:        -53.9325
+test_return_std:          13.4900	weight_norm:              56.5489	
+[INFO 17:12:01] my_main t_env: 50025 / 310000
+[INFO 17:12:01] my_main Estimated time left: 1 hours, 52 minutes, 24 seconds. Time passed: 20 minutes, 54 seconds
+[INFO 17:12:51] my_main Recent Stats | t_env:      52000 | Episode:     2080
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 1.8134	loss:                      0.1547
+min_dists_mean_mean:       0.2766	mind_dist__agent0_mean:    0.2905	mind_dist__agent1_mean:    0.2680	mind_dist__agent2_mean:    0.2713
+q_taken_mean:            -48.7869	return_mean:             -56.2944	return_std:               15.8993	target_mean:             -48.9789
+td_error_abs:              7.4361	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.2561
+test_mind_dist__agent0_mean:  0.2895	test_mind_dist__agent1_mean:  0.2064	test_mind_dist__agent2_mean:  0.2725	test_return_mean:        -52.8650
+test_return_std:          12.1675	weight_norm:              56.5671	
+[INFO 17:12:52] my_main t_env: 52025 / 310000
+[INFO 17:12:52] my_main Estimated time left: 1 hours, 49 minutes, 24 seconds. Time passed: 21 minutes, 44 seconds
+[INFO 17:13:43] my_main Recent Stats | t_env:      54000 | Episode:     2160
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 1.6007	loss:                      0.1487
+min_dists_mean_mean:       0.2718	mind_dist__agent0_mean:    0.2875	mind_dist__agent1_mean:    0.2623	mind_dist__agent2_mean:    0.2654
+q_taken_mean:            -48.6803	return_mean:             -55.4051	return_std:               16.2463	target_mean:             -48.6182
+td_error_abs:              7.3343	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.2783
+test_mind_dist__agent0_mean:  0.2932	test_mind_dist__agent1_mean:  0.2647	test_mind_dist__agent2_mean:  0.2769	test_return_mean:        -56.4896
+test_return_std:          16.2716	weight_norm:              56.5872	
+[INFO 17:13:44] my_main t_env: 54025 / 310000
+[INFO 17:13:44] my_main Estimated time left: 1 hours, 50 minutes, 59 seconds. Time passed: 22 minutes, 36 seconds
+[INFO 17:14:35] my_main Recent Stats | t_env:      56000 | Episode:     2240
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 1.7831	loss:                      0.1624
+min_dists_mean_mean:       0.2649	mind_dist__agent0_mean:    0.2695	mind_dist__agent1_mean:    0.2600	mind_dist__agent2_mean:    0.2652
+q_taken_mean:            -48.4316	return_mean:             -54.8269	return_std:               15.4765	target_mean:             -48.8627
+td_error_abs:              7.5883	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.2618
+test_mind_dist__agent0_mean:  0.2739	test_mind_dist__agent1_mean:  0.2665	test_mind_dist__agent2_mean:  0.2449	test_return_mean:        -56.9395
+test_return_std:          18.2808	weight_norm:              56.6064	
+[INFO 17:14:36] my_main t_env: 56025 / 310000
+[INFO 17:14:36] my_main Estimated time left: 1 hours, 50 minutes, 25 seconds. Time passed: 23 minutes, 29 seconds
+[INFO 17:15:27] my_main Recent Stats | t_env:      58000 | Episode:     2320
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.0552	loss:                      0.1807
+min_dists_mean_mean:       0.2638	mind_dist__agent0_mean:    0.2598	mind_dist__agent1_mean:    0.2662	mind_dist__agent2_mean:    0.2654
+q_taken_mean:            -49.0625	return_mean:             -55.3616	return_std:               14.8549	target_mean:             -49.6537
+td_error_abs:              8.1132	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.2669
+test_mind_dist__agent0_mean:  0.2693	test_mind_dist__agent1_mean:  0.2859	test_mind_dist__agent2_mean:  0.2456	test_return_mean:        -58.2475
+test_return_std:          18.1276	weight_norm:              56.6264	
+[INFO 17:15:28] my_main t_env: 58025 / 310000
+[INFO 17:15:28] my_main Estimated time left: 1 hours, 49 minutes, 41 seconds. Time passed: 24 minutes, 21 seconds
+[INFO 17:16:20] my_main Recent Stats | t_env:      60000 | Episode:     2400
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.0359	loss:                      0.1786
+min_dists_mean_mean:       0.2701	mind_dist__agent0_mean:    0.2556	mind_dist__agent1_mean:    0.2868	mind_dist__agent2_mean:    0.2679
+q_taken_mean:            -50.2242	return_mean:             -55.2423	return_std:               15.0479	target_mean:             -50.9945
+td_error_abs:              8.1218	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.2565
+test_mind_dist__agent0_mean:  0.2706	test_mind_dist__agent1_mean:  0.2852	test_mind_dist__agent2_mean:  0.2136	test_return_mean:        -58.7455
+test_return_std:          17.3071	weight_norm:              56.6463	
+[INFO 17:16:21] my_main t_env: 60025 / 310000
+[INFO 17:16:21] my_main Estimated time left: 1 hours, 50 minutes, 34 seconds. Time passed: 25 minutes, 14 seconds
+[INFO 17:17:12] my_main Recent Stats | t_env:      62000 | Episode:     2480
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.1086	loss:                      0.1852
+min_dists_mean_mean:       0.2618	mind_dist__agent0_mean:    0.2520	mind_dist__agent1_mean:    0.2798	mind_dist__agent2_mean:    0.2536
+q_taken_mean:            -51.1434	return_mean:             -54.7086	return_std:               15.0432	target_mean:             -51.8985
+td_error_abs:              8.1912	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.2348
+test_mind_dist__agent0_mean:  0.1999	test_mind_dist__agent1_mean:  0.2878	test_mind_dist__agent2_mean:  0.2167	test_return_mean:        -58.0798
+test_return_std:          16.5749	weight_norm:              56.6670	
+[INFO 17:17:13] my_main t_env: 62025 / 310000
+[INFO 17:17:13] my_main Estimated time left: 1 hours, 47 minutes, 10 seconds. Time passed: 26 minutes, 6 seconds
+[INFO 17:18:04] my_main Recent Stats | t_env:      64000 | Episode:     2560
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.5397	loss:                      0.2084
+min_dists_mean_mean:       0.2599	mind_dist__agent0_mean:    0.2605	mind_dist__agent1_mean:    0.2780	mind_dist__agent2_mean:    0.2413
+q_taken_mean:            -52.3738	return_mean:             -54.9903	return_std:               14.0965	target_mean:             -53.0667
+td_error_abs:              8.4447	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.2273
+test_mind_dist__agent0_mean:  0.2066	test_mind_dist__agent1_mean:  0.2343	test_mind_dist__agent2_mean:  0.2411	test_return_mean:        -55.3879
+test_return_std:          13.2539	weight_norm:              56.6873	
+[INFO 17:18:05] my_main t_env: 64025 / 310000
+[INFO 17:18:05] my_main Estimated time left: 1 hours, 46 minutes, 51 seconds. Time passed: 26 minutes, 58 seconds
+[INFO 17:18:55] my_main Recent Stats | t_env:      66000 | Episode:     2640
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.4852	loss:                      0.2056
+min_dists_mean_mean:       0.2661	mind_dist__agent0_mean:    0.2739	mind_dist__agent1_mean:    0.2772	mind_dist__agent2_mean:    0.2472
+q_taken_mean:            -53.2891	return_mean:             -55.0441	return_std:               14.1993	target_mean:             -53.5963
+td_error_abs:              8.4049	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.2646
+test_mind_dist__agent0_mean:  0.2697	test_mind_dist__agent1_mean:  0.2630	test_mind_dist__agent2_mean:  0.2611	test_return_mean:        -56.5989
+test_return_std:          11.0625	weight_norm:              56.7074	
+[INFO 17:18:56] my_main t_env: 66025 / 310000
+[INFO 17:18:56] my_main Estimated time left: 1 hours, 43 minutes, 13 seconds. Time passed: 27 minutes, 49 seconds
+[INFO 17:19:48] my_main Recent Stats | t_env:      68000 | Episode:     2720
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.5120	loss:                      0.2007
+min_dists_mean_mean:       0.2634	mind_dist__agent0_mean:    0.2724	mind_dist__agent1_mean:    0.2805	mind_dist__agent2_mean:    0.2372
+q_taken_mean:            -54.9793	return_mean:             -54.7730	return_std:               14.0249	target_mean:             -54.8438
+td_error_abs:              8.2503	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.2828
+test_mind_dist__agent0_mean:  0.2753	test_mind_dist__agent1_mean:  0.2435	test_mind_dist__agent2_mean:  0.3295	test_return_mean:        -56.2341
+test_return_std:          12.0878	weight_norm:              56.7273	
+[INFO 17:19:48] my_main t_env: 68025 / 310000
+[INFO 17:19:48] my_main Estimated time left: 1 hours, 45 minutes, 40 seconds. Time passed: 28 minutes, 41 seconds
+[INFO 17:20:38] my_main Recent Stats | t_env:      70000 | Episode:     2800
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.8462	loss:                      0.2154
+min_dists_mean_mean:       0.2602	mind_dist__agent0_mean:    0.2773	mind_dist__agent1_mean:    0.2654	mind_dist__agent2_mean:    0.2378
+q_taken_mean:            -55.3064	return_mean:             -54.9828	return_std:               13.8735	target_mean:             -54.6920
+td_error_abs:              8.6145	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.3044
+test_mind_dist__agent0_mean:  0.2764	test_mind_dist__agent1_mean:  0.2992	test_mind_dist__agent2_mean:  0.3378	test_return_mean:        -56.0997
+test_return_std:          12.0185	weight_norm:              56.7479	
+[INFO 17:20:39] my_main t_env: 70025 / 310000
+[INFO 17:20:39] my_main Estimated time left: 1 hours, 41 minutes, 26 seconds. Time passed: 29 minutes, 32 seconds
+[INFO 17:21:32] my_main Recent Stats | t_env:      72000 | Episode:     2880
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 3.0447	loss:                      0.2191
+min_dists_mean_mean:       0.2543	mind_dist__agent0_mean:    0.2666	mind_dist__agent1_mean:    0.2475	mind_dist__agent2_mean:    0.2488
+q_taken_mean:            -56.1488	return_mean:             -54.4060	return_std:               13.5381	target_mean:             -55.6578
+td_error_abs:              8.7734	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.3228
+test_mind_dist__agent0_mean:  0.3041	test_mind_dist__agent1_mean:  0.3209	test_mind_dist__agent2_mean:  0.3432	test_return_mean:        -58.1737
+test_return_std:          12.9527	weight_norm:              56.7686	
+[INFO 17:21:33] my_main t_env: 72025 / 310000
+[INFO 17:21:33] my_main Estimated time left: 1 hours, 46 minutes, 43 seconds. Time passed: 30 minutes, 26 seconds
+[INFO 17:22:24] my_main Recent Stats | t_env:      74000 | Episode:     2960
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.6866	loss:                      0.1985
+min_dists_mean_mean:       0.2481	mind_dist__agent0_mean:    0.2448	mind_dist__agent1_mean:    0.2512	mind_dist__agent2_mean:    0.2482
+q_taken_mean:            -56.3776	return_mean:             -53.8730	return_std:               14.1562	target_mean:             -56.0002
+td_error_abs:              8.5532	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.3497
+test_mind_dist__agent0_mean:  0.3124	test_mind_dist__agent1_mean:  0.4240	test_mind_dist__agent2_mean:  0.3127	test_return_mean:        -58.4914
+test_return_std:          12.7889	weight_norm:              56.7886	
+[INFO 17:22:24] my_main t_env: 74025 / 310000
+[INFO 17:22:24] my_main Estimated time left: 1 hours, 41 minutes, 4 seconds. Time passed: 31 minutes, 17 seconds
+[INFO 17:23:16] my_main Recent Stats | t_env:      76000 | Episode:     3040
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.6727	loss:                      0.2018
+min_dists_mean_mean:       0.2374	mind_dist__agent0_mean:    0.2293	mind_dist__agent1_mean:    0.2509	mind_dist__agent2_mean:    0.2321
+q_taken_mean:            -57.9664	return_mean:             -53.3727	return_std:               13.9142	target_mean:             -57.6506
+td_error_abs:              8.5922	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.2965
+test_mind_dist__agent0_mean:  0.2413	test_mind_dist__agent1_mean:  0.3834	test_mind_dist__agent2_mean:  0.2647	test_return_mean:        -55.7746
+test_return_std:          11.6769	weight_norm:              56.8088	
+[INFO 17:23:17] my_main t_env: 76025 / 310000
+[INFO 17:23:17] my_main Estimated time left: 1 hours, 43 minutes, 17 seconds. Time passed: 32 minutes, 10 seconds
+[INFO 17:24:09] my_main Recent Stats | t_env:      78000 | Episode:     3120
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 3.0073	loss:                      0.2299
+min_dists_mean_mean:       0.2323	mind_dist__agent0_mean:    0.2224	mind_dist__agent1_mean:    0.2435	mind_dist__agent2_mean:    0.2309
+q_taken_mean:            -58.8403	return_mean:             -52.7028	return_std:               13.9495	target_mean:             -59.0838
+td_error_abs:              8.8170	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.3215
+test_mind_dist__agent0_mean:  0.3307	test_mind_dist__agent1_mean:  0.3944	test_mind_dist__agent2_mean:  0.2393	test_return_mean:        -56.9595
+test_return_std:          13.4714	weight_norm:              56.8288	
+[INFO 17:24:10] my_main t_env: 78025 / 310000
+[INFO 17:24:10] my_main Estimated time left: 1 hours, 42 minutes, 14 seconds. Time passed: 33 minutes, 3 seconds
+[INFO 17:25:02] my_main Recent Stats | t_env:      80000 | Episode:     3200
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.7172	loss:                      0.2244
+min_dists_mean_mean:       0.2194	mind_dist__agent0_mean:    0.2085	mind_dist__agent1_mean:    0.2314	mind_dist__agent2_mean:    0.2183
+q_taken_mean:            -59.3789	return_mean:             -51.9542	return_std:               14.3606	target_mean:             -59.8098
+td_error_abs:              8.7122	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.2945
+test_mind_dist__agent0_mean:  0.3114	test_mind_dist__agent1_mean:  0.3393	test_mind_dist__agent2_mean:  0.2327	test_return_mean:        -56.6988
+test_return_std:          13.2684	weight_norm:              56.8472	
+[INFO 17:25:03] my_main t_env: 80025 / 310000
+[INFO 17:25:03] my_main Estimated time left: 1 hours, 41 minutes, 11 seconds. Time passed: 33 minutes, 56 seconds
+[INFO 17:25:54] my_main Recent Stats | t_env:      82000 | Episode:     3280
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.9132	loss:                      0.2309
+min_dists_mean_mean:       0.2218	mind_dist__agent0_mean:    0.2141	mind_dist__agent1_mean:    0.2481	mind_dist__agent2_mean:    0.2033
+q_taken_mean:            -59.3275	return_mean:             -52.5078	return_std:               14.3020	target_mean:             -59.0578
+td_error_abs:              8.8494	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.2858
+test_mind_dist__agent0_mean:  0.3092	test_mind_dist__agent1_mean:  0.3216	test_mind_dist__agent2_mean:  0.2265	test_return_mean:        -54.7503
+test_return_std:          12.5716	weight_norm:              56.8685	
+[INFO 17:25:54] my_main t_env: 82025 / 310000
+[INFO 17:25:54] my_main Estimated time left: 1 hours, 38 minutes, 6 seconds. Time passed: 34 minutes, 47 seconds
+[INFO 17:26:46] my_main Recent Stats | t_env:      84000 | Episode:     3360
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 3.1096	loss:                      0.2436
+min_dists_mean_mean:       0.2094	mind_dist__agent0_mean:    0.2072	mind_dist__agent1_mean:    0.2324	mind_dist__agent2_mean:    0.1885
+q_taken_mean:            -58.6407	return_mean:             -52.1337	return_std:               14.0157	target_mean:             -58.5627
+td_error_abs:              9.0818	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.2271
+test_mind_dist__agent0_mean:  0.2484	test_mind_dist__agent1_mean:  0.2405	test_mind_dist__agent2_mean:  0.1925	test_return_mean:        -52.4814
+test_return_std:          12.0997	weight_norm:              56.8889	
+[INFO 17:26:46] my_main t_env: 84025 / 310000
+[INFO 17:26:46] my_main Estimated time left: 1 hours, 37 minutes, 28 seconds. Time passed: 35 minutes, 39 seconds
+[INFO 17:27:38] my_main Recent Stats | t_env:      86000 | Episode:     3440
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.8602	loss:                      0.2335
+min_dists_mean_mean:       0.2040	mind_dist__agent0_mean:    0.2102	mind_dist__agent1_mean:    0.2200	mind_dist__agent2_mean:    0.1820
+q_taken_mean:            -58.6511	return_mean:             -51.8765	return_std:               13.7615	target_mean:             -58.5437
+td_error_abs:              9.0232	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.2450
+test_mind_dist__agent0_mean:  0.2838	test_mind_dist__agent1_mean:  0.2546	test_mind_dist__agent2_mean:  0.1967	test_return_mean:        -53.8696
+test_return_std:          13.3643	weight_norm:              56.9101	
+[INFO 17:27:39] my_main t_env: 86025 / 310000
+[INFO 17:27:39] my_main Estimated time left: 1 hours, 37 minutes, 41 seconds. Time passed: 36 minutes, 32 seconds
+[INFO 17:28:31] my_main Recent Stats | t_env:      88000 | Episode:     3520
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.4936	loss:                      0.2157
+min_dists_mean_mean:       0.2003	mind_dist__agent0_mean:    0.2197	mind_dist__agent1_mean:    0.1968	mind_dist__agent2_mean:    0.1845
+q_taken_mean:            -58.3683	return_mean:             -51.6325	return_std:               13.8273	target_mean:             -57.9992
+td_error_abs:              8.9730	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.2078
+test_mind_dist__agent0_mean:  0.1871	test_mind_dist__agent1_mean:  0.2128	test_mind_dist__agent2_mean:  0.2236	test_return_mean:        -51.2690
+test_return_std:          11.2871	weight_norm:              56.9306	
+[INFO 17:28:31] my_main t_env: 88025 / 310000
+[INFO 17:28:31] my_main Estimated time left: 1 hours, 37 minutes, 39 seconds. Time passed: 37 minutes, 24 seconds
+[INFO 17:29:23] my_main Recent Stats | t_env:      90000 | Episode:     3600
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.7502	loss:                      0.2141
+min_dists_mean_mean:       0.1940	mind_dist__agent0_mean:    0.2133	mind_dist__agent1_mean:    0.1877	mind_dist__agent2_mean:    0.1810
+q_taken_mean:            -59.3945	return_mean:             -51.2613	return_std:               13.3190	target_mean:             -58.9398
+td_error_abs:              8.8974	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.2060
+test_mind_dist__agent0_mean:  0.1741	test_mind_dist__agent1_mean:  0.2258	test_mind_dist__agent2_mean:  0.2182	test_return_mean:        -49.6507
+test_return_std:          11.1170	weight_norm:              56.9513	
+[INFO 17:29:23] my_main t_env: 90025 / 310000
+[INFO 17:29:23] my_main Estimated time left: 1 hours, 35 minutes, 26 seconds. Time passed: 38 minutes, 16 seconds
+[INFO 17:30:16] my_main Recent Stats | t_env:      92000 | Episode:     3680
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.7626	loss:                      0.2320
+min_dists_mean_mean:       0.1932	mind_dist__agent0_mean:    0.2035	mind_dist__agent1_mean:    0.1860	mind_dist__agent2_mean:    0.1903
+q_taken_mean:            -59.7137	return_mean:             -50.9777	return_std:               13.3830	target_mean:             -60.0193
+td_error_abs:              9.2064	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.2083
+test_mind_dist__agent0_mean:  0.1510	test_mind_dist__agent1_mean:  0.2218	test_mind_dist__agent2_mean:  0.2521	test_return_mean:        -51.8091
+test_return_std:          12.5386	weight_norm:              56.9700	
+[INFO 17:30:17] my_main t_env: 92025 / 310000
+[INFO 17:30:17] my_main Estimated time left: 1 hours, 36 minutes, 54 seconds. Time passed: 39 minutes, 10 seconds
+[INFO 17:31:09] my_main Recent Stats | t_env:      94000 | Episode:     3760
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.6096	loss:                      0.2238
+min_dists_mean_mean:       0.1813	mind_dist__agent0_mean:    0.1948	mind_dist__agent1_mean:    0.1676	mind_dist__agent2_mean:    0.1817
+q_taken_mean:            -61.6298	return_mean:             -50.4092	return_std:               12.9663	target_mean:             -61.6099
+td_error_abs:              9.1367	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.2015
+test_mind_dist__agent0_mean:  0.1679	test_mind_dist__agent1_mean:  0.1748	test_mind_dist__agent2_mean:  0.2617	test_return_mean:        -52.8218
+test_return_std:          12.9363	weight_norm:              56.9904	
+[INFO 17:31:10] my_main t_env: 94025 / 310000
+[INFO 17:31:10] my_main Estimated time left: 1 hours, 35 minutes, 35 seconds. Time passed: 40 minutes, 3 seconds
+[INFO 17:32:02] my_main Recent Stats | t_env:      96000 | Episode:     3840
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.9939	loss:                      0.2472
+min_dists_mean_mean:       0.1807	mind_dist__agent0_mean:    0.1760	mind_dist__agent1_mean:    0.1761	mind_dist__agent2_mean:    0.1900
+q_taken_mean:            -61.4073	return_mean:             -50.4024	return_std:               13.5129	target_mean:             -61.3047
+td_error_abs:              9.2153	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1908
+test_mind_dist__agent0_mean:  0.1235	test_mind_dist__agent1_mean:  0.1355	test_mind_dist__agent2_mean:  0.3134	test_return_mean:        -50.0922
+test_return_std:          12.2925	weight_norm:              57.0088	
+[INFO 17:32:03] my_main t_env: 96025 / 310000
+[INFO 17:32:03] my_main Estimated time left: 1 hours, 34 minutes, 7 seconds. Time passed: 40 minutes, 56 seconds
+[INFO 17:32:55] my_main Recent Stats | t_env:      98000 | Episode:     3920
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.7995	loss:                      0.2284
+min_dists_mean_mean:       0.1750	mind_dist__agent0_mean:    0.1682	mind_dist__agent1_mean:    0.1848	mind_dist__agent2_mean:    0.1718
+q_taken_mean:            -62.5353	return_mean:             -50.2439	return_std:               13.2916	target_mean:             -62.4406
+td_error_abs:              8.8072	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1881
+test_mind_dist__agent0_mean:  0.1088	test_mind_dist__agent1_mean:  0.1953	test_mind_dist__agent2_mean:  0.2602	test_return_mean:        -51.1686
+test_return_std:          13.2406	weight_norm:              57.0272	
+[INFO 17:32:55] my_main t_env: 98025 / 310000
+[INFO 17:32:55] my_main Estimated time left: 1 hours, 32 minutes, 54 seconds. Time passed: 41 minutes, 48 seconds
+[INFO 17:33:48] my_main Recent Stats | t_env:     100000 | Episode:     4000
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.5924	loss:                      0.2262
+min_dists_mean_mean:       0.1635	mind_dist__agent0_mean:    0.1537	mind_dist__agent1_mean:    0.1798	mind_dist__agent2_mean:    0.1569
+q_taken_mean:            -60.9906	return_mean:             -49.8588	return_std:               12.9575	target_mean:             -60.9300
+td_error_abs:              8.7280	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.2031
+test_mind_dist__agent0_mean:  0.1228	test_mind_dist__agent1_mean:  0.2081	test_mind_dist__agent2_mean:  0.2783	test_return_mean:        -51.8942
+test_return_std:          14.1595	weight_norm:              57.0458	
+[INFO 17:33:49] my_main t_env: 100025 / 310000
+[INFO 17:33:49] my_main Estimated time left: 1 hours, 33 minutes, 36 seconds. Time passed: 42 minutes, 42 seconds
+[INFO 17:34:41] my_main Recent Stats | t_env:     102000 | Episode:     4080
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.3380	loss:                      0.2136
+min_dists_mean_mean:       0.1466	mind_dist__agent0_mean:    0.1359	mind_dist__agent1_mean:    0.1626	mind_dist__agent2_mean:    0.1414
+q_taken_mean:            -61.6862	return_mean:             -48.5778	return_std:               12.2532	target_mean:             -61.2153
+td_error_abs:              8.2326	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1781
+test_mind_dist__agent0_mean:  0.1221	test_mind_dist__agent1_mean:  0.1959	test_mind_dist__agent2_mean:  0.2163	test_return_mean:        -49.3303
+test_return_std:          12.1252	weight_norm:              57.0647	
+[INFO 17:34:42] my_main t_env: 102025 / 310000
+[INFO 17:34:42] my_main Estimated time left: 1 hours, 32 minutes, 13 seconds. Time passed: 43 minutes, 35 seconds
+[INFO 17:35:34] my_main Recent Stats | t_env:     104000 | Episode:     4160
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.2317	loss:                      0.2148
+min_dists_mean_mean:       0.1499	mind_dist__agent0_mean:    0.1456	mind_dist__agent1_mean:    0.1538	mind_dist__agent2_mean:    0.1502
+q_taken_mean:            -61.3968	return_mean:             -48.0049	return_std:               11.6340	target_mean:             -61.0834
+td_error_abs:              8.2520	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1795
+test_mind_dist__agent0_mean:  0.1405	test_mind_dist__agent1_mean:  0.1941	test_mind_dist__agent2_mean:  0.2039	test_return_mean:        -49.4655
+test_return_std:          12.7792	weight_norm:              57.0838	
+[INFO 17:35:35] my_main t_env: 104025 / 310000
+[INFO 17:35:35] my_main Estimated time left: 1 hours, 30 minutes, 55 seconds. Time passed: 44 minutes, 28 seconds
+[INFO 17:36:27] my_main Recent Stats | t_env:     106000 | Episode:     4240
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.2011	loss:                      0.2057
+min_dists_mean_mean:       0.1416	mind_dist__agent0_mean:    0.1525	mind_dist__agent1_mean:    0.1355	mind_dist__agent2_mean:    0.1368
+q_taken_mean:            -62.0101	return_mean:             -47.0332	return_std:               10.6175	target_mean:             -62.1167
+td_error_abs:              8.3550	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1605
+test_mind_dist__agent0_mean:  0.1419	test_mind_dist__agent1_mean:  0.1998	test_mind_dist__agent2_mean:  0.1398	test_return_mean:        -50.5426
+test_return_std:          12.2078	weight_norm:              57.1030	
+[INFO 17:36:27] my_main t_env: 106025 / 310000
+[INFO 17:36:27] my_main Estimated time left: 1 hours, 29 minutes, 0 seconds. Time passed: 45 minutes, 20 seconds
+[INFO 17:37:19] my_main Recent Stats | t_env:     108000 | Episode:     4320
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.6382	loss:                      0.2334
+min_dists_mean_mean:       0.1342	mind_dist__agent0_mean:    0.1235	mind_dist__agent1_mean:    0.1467	mind_dist__agent2_mean:    0.1323
+q_taken_mean:            -61.9371	return_mean:             -46.5056	return_std:               10.3156	target_mean:             -62.3282
+td_error_abs:              9.0001	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1302
+test_mind_dist__agent0_mean:  0.1392	test_mind_dist__agent1_mean:  0.1319	test_mind_dist__agent2_mean:  0.1193	test_return_mean:        -49.2267
+test_return_std:          10.7366	weight_norm:              57.1224	
+[INFO 17:37:20] my_main t_env: 108025 / 310000
+[INFO 17:37:20] my_main Estimated time left: 1 hours, 27 minutes, 58 seconds. Time passed: 46 minutes, 13 seconds
+[INFO 17:38:12] my_main Recent Stats | t_env:     110000 | Episode:     4400
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.6861	loss:                      0.2473
+min_dists_mean_mean:       0.1368	mind_dist__agent0_mean:    0.1288	mind_dist__agent1_mean:    0.1410	mind_dist__agent2_mean:    0.1404
+q_taken_mean:            -63.8314	return_mean:             -46.2196	return_std:               10.6820	target_mean:             -64.2842
+td_error_abs:              9.3432	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1042
+test_mind_dist__agent0_mean:  0.1228	test_mind_dist__agent1_mean:  0.0860	test_mind_dist__agent2_mean:  0.1039	test_return_mean:        -47.6548
+test_return_std:           9.2933	weight_norm:              57.1429	
+[INFO 17:38:12] my_main t_env: 110025 / 310000
+[INFO 17:38:12] my_main Estimated time left: 1 hours, 27 minutes, 49 seconds. Time passed: 47 minutes, 5 seconds
+[INFO 17:39:05] my_main Recent Stats | t_env:     112000 | Episode:     4480
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.8314	loss:                      0.2464
+min_dists_mean_mean:       0.1349	mind_dist__agent0_mean:    0.1444	mind_dist__agent1_mean:    0.1308	mind_dist__agent2_mean:    0.1297
+q_taken_mean:            -64.6609	return_mean:             -46.0201	return_std:               10.5465	target_mean:             -65.5107
+td_error_abs:              9.6367	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1144
+test_mind_dist__agent0_mean:  0.1378	test_mind_dist__agent1_mean:  0.1069	test_mind_dist__agent2_mean:  0.0985	test_return_mean:        -46.7569
+test_return_std:           9.6737	weight_norm:              57.1625	
+[INFO 17:39:05] my_main t_env: 112025 / 310000
+[INFO 17:39:05] my_main Estimated time left: 1 hours, 27 minutes, 12 seconds. Time passed: 47 minutes, 58 seconds
+[INFO 17:39:57] my_main Recent Stats | t_env:     114000 | Episode:     4560
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.9311	loss:                      0.2500
+min_dists_mean_mean:       0.1357	mind_dist__agent0_mean:    0.1449	mind_dist__agent1_mean:    0.1499	mind_dist__agent2_mean:    0.1123
+q_taken_mean:            -64.5263	return_mean:             -46.1853	return_std:               10.6728	target_mean:             -65.5116
+td_error_abs:              9.6445	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1204
+test_mind_dist__agent0_mean:  0.1150	test_mind_dist__agent1_mean:  0.1076	test_mind_dist__agent2_mean:  0.1384	test_return_mean:        -45.6490
+test_return_std:           8.7721	weight_norm:              57.1816	
+[INFO 17:39:57] my_main t_env: 114025 / 310000
+[INFO 17:39:57] my_main Estimated time left: 1 hours, 25 minutes, 11 seconds. Time passed: 48 minutes, 50 seconds
+[INFO 17:40:50] my_main Recent Stats | t_env:     116000 | Episode:     4640
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.6240	loss:                      0.2379
+min_dists_mean_mean:       0.1348	mind_dist__agent0_mean:    0.1502	mind_dist__agent1_mean:    0.1440	mind_dist__agent2_mean:    0.1103
+q_taken_mean:            -63.9887	return_mean:             -46.2101	return_std:               10.7396	target_mean:             -64.6971
+td_error_abs:              9.3695	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1150
+test_mind_dist__agent0_mean:  0.1105	test_mind_dist__agent1_mean:  0.0951	test_mind_dist__agent2_mean:  0.1395	test_return_mean:        -44.5756
+test_return_std:           8.4870	weight_norm:              57.2017	
+[INFO 17:40:50] my_main t_env: 116025 / 310000
+[INFO 17:40:50] my_main Estimated time left: 1 hours, 25 minutes, 53 seconds. Time passed: 49 minutes, 43 seconds
+[INFO 17:41:43] my_main Recent Stats | t_env:     118000 | Episode:     4720
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.2702	loss:                      0.2114
+min_dists_mean_mean:       0.1396	mind_dist__agent0_mean:    0.1691	mind_dist__agent1_mean:    0.1403	mind_dist__agent2_mean:    0.1093
+q_taken_mean:            -63.5414	return_mean:             -45.9032	return_std:               10.5781	target_mean:             -63.8652
+td_error_abs:              8.7080	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1303
+test_mind_dist__agent0_mean:  0.1329	test_mind_dist__agent1_mean:  0.0936	test_mind_dist__agent2_mean:  0.1646	test_return_mean:        -44.3409
+test_return_std:           8.2567	weight_norm:              57.2220	
+[INFO 17:41:44] my_main t_env: 118025 / 310000
+[INFO 17:41:44] my_main Estimated time left: 1 hours, 25 minutes, 6 seconds. Time passed: 50 minutes, 37 seconds
+[INFO 17:42:36] my_main Recent Stats | t_env:     120000 | Episode:     4800
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.3452	loss:                      0.2214
+min_dists_mean_mean:       0.1383	mind_dist__agent0_mean:    0.1805	mind_dist__agent1_mean:    0.1355	mind_dist__agent2_mean:    0.0988
+q_taken_mean:            -63.3395	return_mean:             -45.3682	return_std:                9.9449	target_mean:             -63.9384
+td_error_abs:              8.8475	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1732
+test_mind_dist__agent0_mean:  0.1874	test_mind_dist__agent1_mean:  0.1101	test_mind_dist__agent2_mean:  0.2222	test_return_mean:        -45.9329
+test_return_std:           9.1736	weight_norm:              57.2414	
+[INFO 17:42:36] my_main t_env: 120025 / 310000
+[INFO 17:42:36] my_main Estimated time left: 1 hours, 23 minutes, 32 seconds. Time passed: 51 minutes, 29 seconds
+[INFO 17:43:28] my_main Recent Stats | t_env:     122000 | Episode:     4880
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 1.8691	loss:                      0.2026
+min_dists_mean_mean:       0.1452	mind_dist__agent0_mean:    0.1818	mind_dist__agent1_mean:    0.1412	mind_dist__agent2_mean:    0.1125
+q_taken_mean:            -62.2090	return_mean:             -45.1602	return_std:               10.1908	target_mean:             -62.3587
+td_error_abs:              8.4150	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1499
+test_mind_dist__agent0_mean:  0.1587	test_mind_dist__agent1_mean:  0.0875	test_mind_dist__agent2_mean:  0.2035	test_return_mean:        -46.3137
+test_return_std:           8.4544	weight_norm:              57.2613	
+[INFO 17:43:29] my_main t_env: 122025 / 310000
+[INFO 17:43:29] my_main Estimated time left: 1 hours, 22 minutes, 4 seconds. Time passed: 52 minutes, 22 seconds
+[INFO 17:44:21] my_main Recent Stats | t_env:     124000 | Episode:     4960
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.0576	loss:                      0.2281
+min_dists_mean_mean:       0.1486	mind_dist__agent0_mean:    0.1893	mind_dist__agent1_mean:    0.1446	mind_dist__agent2_mean:    0.1120
+q_taken_mean:            -64.1164	return_mean:             -45.1074	return_std:               10.1081	target_mean:             -64.1569
+td_error_abs:              8.9066	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1540
+test_mind_dist__agent0_mean:  0.1583	test_mind_dist__agent1_mean:  0.0935	test_mind_dist__agent2_mean:  0.2103	test_return_mean:        -46.4722
+test_return_std:           8.8682	weight_norm:              57.2820	
+[INFO 17:44:22] my_main t_env: 124025 / 310000
+[INFO 17:44:22] my_main Estimated time left: 1 hours, 22 minutes, 22 seconds. Time passed: 53 minutes, 15 seconds
+[INFO 17:45:14] my_main Recent Stats | t_env:     126000 | Episode:     5040
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.1399	loss:                      0.2363
+min_dists_mean_mean:       0.1499	mind_dist__agent0_mean:    0.1771	mind_dist__agent1_mean:    0.1502	mind_dist__agent2_mean:    0.1224
+q_taken_mean:            -65.5952	return_mean:             -44.4711	return_std:                9.7197	target_mean:             -65.7435
+td_error_abs:              9.1315	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1686
+test_mind_dist__agent0_mean:  0.1537	test_mind_dist__agent1_mean:  0.0932	test_mind_dist__agent2_mean:  0.2589	test_return_mean:        -45.9325
+test_return_std:           8.8189	weight_norm:              57.3026	
+[INFO 17:45:14] my_main t_env: 126025 / 310000
+[INFO 17:45:14] my_main Estimated time left: 1 hours, 19 minutes, 58 seconds. Time passed: 54 minutes, 7 seconds
+[INFO 17:46:07] my_main Recent Stats | t_env:     128000 | Episode:     5120
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.4406	loss:                      0.2637
+min_dists_mean_mean:       0.1448	mind_dist__agent0_mean:    0.1550	mind_dist__agent1_mean:    0.1378	mind_dist__agent2_mean:    0.1415
+q_taken_mean:            -66.1921	return_mean:             -43.9999	return_std:                9.4568	target_mean:             -66.6816
+td_error_abs:              9.7732	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1598
+test_mind_dist__agent0_mean:  0.1382	test_mind_dist__agent1_mean:  0.1157	test_mind_dist__agent2_mean:  0.2256	test_return_mean:        -45.6702
+test_return_std:           8.9832	weight_norm:              57.3236	
+[INFO 17:46:08] my_main t_env: 128025 / 310000
+[INFO 17:46:08] my_main Estimated time left: 1 hours, 21 minutes, 4 seconds. Time passed: 55 minutes, 1 seconds
+[INFO 17:47:00] my_main Recent Stats | t_env:     130000 | Episode:     5200
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.3983	loss:                      0.2471
+min_dists_mean_mean:       0.1712	mind_dist__agent0_mean:    0.1662	mind_dist__agent1_mean:    0.1679	mind_dist__agent2_mean:    0.1796
+q_taken_mean:            -66.8133	return_mean:             -44.7816	return_std:                9.6569	target_mean:             -67.3651
+td_error_abs:              9.4125	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1132
+test_mind_dist__agent0_mean:  0.0803	test_mind_dist__agent1_mean:  0.0996	test_mind_dist__agent2_mean:  0.1598	test_return_mean:        -43.1661
+test_return_std:           7.8043	weight_norm:              57.3439	
+[INFO 17:47:01] my_main t_env: 130025 / 310000
+[INFO 17:47:01] my_main Estimated time left: 1 hours, 19 minutes, 22 seconds. Time passed: 55 minutes, 53 seconds
+[INFO 17:47:51] my_main Recent Stats | t_env:     132000 | Episode:     5280
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.6895	loss:                      0.2638
+min_dists_mean_mean:       0.1610	mind_dist__agent0_mean:    0.1558	mind_dist__agent1_mean:    0.1599	mind_dist__agent2_mean:    0.1674
+q_taken_mean:            -68.3212	return_mean:             -44.6225	return_std:                9.2596	target_mean:             -69.0155
+td_error_abs:              9.6639	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1466
+test_mind_dist__agent0_mean:  0.0717	test_mind_dist__agent1_mean:  0.1540	test_mind_dist__agent2_mean:  0.2142	test_return_mean:        -42.0971
+test_return_std:           7.3482	weight_norm:              57.3627	
+[INFO 17:47:52] my_main t_env: 132025 / 310000
+[INFO 17:47:52] my_main Estimated time left: 1 hours, 15 minutes, 38 seconds. Time passed: 56 minutes, 44 seconds
+[INFO 17:48:42] my_main Recent Stats | t_env:     134000 | Episode:     5360
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.7850	loss:                      0.2512
+min_dists_mean_mean:       0.1563	mind_dist__agent0_mean:    0.1434	mind_dist__agent1_mean:    0.1533	mind_dist__agent2_mean:    0.1721
+q_taken_mean:            -67.8345	return_mean:             -44.0760	return_std:                9.0860	target_mean:             -68.1885
+td_error_abs:              9.5068	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1747
+test_mind_dist__agent0_mean:  0.0569	test_mind_dist__agent1_mean:  0.2369	test_mind_dist__agent2_mean:  0.2303	test_return_mean:        -42.1936
+test_return_std:           7.4419	weight_norm:              57.3819	
+[INFO 17:48:42] my_main t_env: 134025 / 310000
+[INFO 17:48:42] my_main Estimated time left: 1 hours, 14 minutes, 36 seconds. Time passed: 57 minutes, 35 seconds
+[INFO 17:49:33] my_main Recent Stats | t_env:     136000 | Episode:     5440
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.7953	loss:                      0.2586
+min_dists_mean_mean:       0.1604	mind_dist__agent0_mean:    0.1469	mind_dist__agent1_mean:    0.1537	mind_dist__agent2_mean:    0.1806
+q_taken_mean:            -68.4504	return_mean:             -44.5817	return_std:                9.3175	target_mean:             -68.6522
+td_error_abs:              9.6622	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1769
+test_mind_dist__agent0_mean:  0.1034	test_mind_dist__agent1_mean:  0.2378	test_mind_dist__agent2_mean:  0.1894	test_return_mean:        -42.9186
+test_return_std:           8.0245	weight_norm:              57.4010	
+[INFO 17:49:34] my_main t_env: 136025 / 310000
+[INFO 17:49:34] my_main Estimated time left: 1 hours, 14 minutes, 16 seconds. Time passed: 58 minutes, 27 seconds
+[INFO 17:50:24] my_main Recent Stats | t_env:     138000 | Episode:     5520
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.6730	loss:                      0.2423
+min_dists_mean_mean:       0.1707	mind_dist__agent0_mean:    0.1645	mind_dist__agent1_mean:    0.1686	mind_dist__agent2_mean:    0.1791
+q_taken_mean:            -68.4873	return_mean:             -44.8045	return_std:                9.6875	target_mean:             -68.1576
+td_error_abs:              9.3855	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1770
+test_mind_dist__agent0_mean:  0.1091	test_mind_dist__agent1_mean:  0.2213	test_mind_dist__agent2_mean:  0.2005	test_return_mean:        -43.2863
+test_return_std:           9.0332	weight_norm:              57.4176	
+[INFO 17:50:24] my_main t_env: 138025 / 310000
+[INFO 17:50:24] my_main Estimated time left: 1 hours, 12 minutes, 51 seconds. Time passed: 59 minutes, 17 seconds
+[INFO 17:51:14] my_main Recent Stats | t_env:     140000 | Episode:     5600
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.9011	loss:                      0.2532
+min_dists_mean_mean:       0.1497	mind_dist__agent0_mean:    0.1340	mind_dist__agent1_mean:    0.1597	mind_dist__agent2_mean:    0.1552
+q_taken_mean:            -67.7371	return_mean:             -44.3713	return_std:                9.4876	target_mean:             -66.9434
+td_error_abs:              9.6821	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.2300
+test_mind_dist__agent0_mean:  0.1748	test_mind_dist__agent1_mean:  0.3146	test_mind_dist__agent2_mean:  0.2005	test_return_mean:        -45.3914
+test_return_std:           9.6836	weight_norm:              57.4358	
+[INFO 17:51:15] my_main t_env: 140025 / 310000
+[INFO 17:51:15] my_main Estimated time left: 1 hours, 11 minutes, 39 seconds. Time passed: 1 hours, 8 seconds
+[INFO 17:52:07] my_main Recent Stats | t_env:     142000 | Episode:     5680
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 3.1144	loss:                      0.2479
+min_dists_mean_mean:       0.1680	mind_dist__agent0_mean:    0.1477	mind_dist__agent1_mean:    0.1918	mind_dist__agent2_mean:    0.1646
+q_taken_mean:            -66.9222	return_mean:             -44.4777	return_std:                9.9277	target_mean:             -65.7316
+td_error_abs:              9.7508	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1934
+test_mind_dist__agent0_mean:  0.1876	test_mind_dist__agent1_mean:  0.2460	test_mind_dist__agent2_mean:  0.1466	test_return_mean:        -44.3891
+test_return_std:           9.2456	weight_norm:              57.4549	
+[INFO 17:52:07] my_main t_env: 142025 / 310000
+[INFO 17:52:07] my_main Estimated time left: 1 hours, 13 minutes, 4 seconds. Time passed: 1 hours, 1 minutes, 0 seconds
+[INFO 17:52:59] my_main Recent Stats | t_env:     144000 | Episode:     5760
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.9373	loss:                      0.2353
+min_dists_mean_mean:       0.1771	mind_dist__agent0_mean:    0.1597	mind_dist__agent1_mean:    0.1784	mind_dist__agent2_mean:    0.1932
+q_taken_mean:            -66.9782	return_mean:             -44.4342	return_std:                9.7642	target_mean:             -66.2367
+td_error_abs:              9.4349	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1508
+test_mind_dist__agent0_mean:  0.1957	test_mind_dist__agent1_mean:  0.1794	test_mind_dist__agent2_mean:  0.0772	test_return_mean:        -44.7325
+test_return_std:           9.3486	weight_norm:              57.4712	
+[INFO 17:53:00] my_main t_env: 144025 / 310000
+[INFO 17:53:00] my_main Estimated time left: 1 hours, 12 minutes, 23 seconds. Time passed: 1 hours, 1 minutes, 53 seconds
+[INFO 17:53:52] my_main Recent Stats | t_env:     146000 | Episode:     5840
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.8670	loss:                      0.2217
+min_dists_mean_mean:       0.1807	mind_dist__agent0_mean:    0.1542	mind_dist__agent1_mean:    0.2025	mind_dist__agent2_mean:    0.1854
+q_taken_mean:            -65.3777	return_mean:             -44.4014	return_std:                9.6211	target_mean:             -64.6658
+td_error_abs:              9.0558	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1642
+test_mind_dist__agent0_mean:  0.1931	test_mind_dist__agent1_mean:  0.2197	test_mind_dist__agent2_mean:  0.0797	test_return_mean:        -44.6678
+test_return_std:           9.9226	weight_norm:              57.4864	
+[INFO 17:53:52] my_main t_env: 146025 / 310000
+[INFO 17:53:52] my_main Estimated time left: 1 hours, 11 minutes, 58 seconds. Time passed: 1 hours, 2 minutes, 45 seconds
+[INFO 17:54:45] my_main Recent Stats | t_env:     148000 | Episode:     5920
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.8091	loss:                      0.2168
+min_dists_mean_mean:       0.1745	mind_dist__agent0_mean:    0.1457	mind_dist__agent1_mean:    0.1886	mind_dist__agent2_mean:    0.1891
+q_taken_mean:            -65.4019	return_mean:             -44.6483	return_std:                9.4900	target_mean:             -64.9602
+td_error_abs:              8.9122	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1748
+test_mind_dist__agent0_mean:  0.2132	test_mind_dist__agent1_mean:  0.2129	test_mind_dist__agent2_mean:  0.0982	test_return_mean:        -44.4388
+test_return_std:           9.4053	weight_norm:              57.5025	
+[INFO 17:54:46] my_main t_env: 148025 / 310000
+[INFO 17:54:46] my_main Estimated time left: 1 hours, 12 minutes, 11 seconds. Time passed: 1 hours, 3 minutes, 39 seconds
+[INFO 17:55:39] my_main Recent Stats | t_env:     150000 | Episode:     6000
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.6706	loss:                      0.2224
+min_dists_mean_mean:       0.1800	mind_dist__agent0_mean:    0.1541	mind_dist__agent1_mean:    0.1760	mind_dist__agent2_mean:    0.2098
+q_taken_mean:            -66.6037	return_mean:             -44.2737	return_std:                9.2931	target_mean:             -66.6083
+td_error_abs:              8.9333	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1716
+test_mind_dist__agent0_mean:  0.2908	test_mind_dist__agent1_mean:  0.1216	test_mind_dist__agent2_mean:  0.1024	test_return_mean:        -44.2165
+test_return_std:           9.2795	weight_norm:              57.5158	
+[INFO 17:55:39] my_main t_env: 150025 / 310000
+[INFO 17:55:39] my_main Estimated time left: 1 hours, 11 minutes, 36 seconds. Time passed: 1 hours, 4 minutes, 32 seconds
+[INFO 17:56:30] my_main Recent Stats | t_env:     152000 | Episode:     6080
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.1363	loss:                      0.2227
+min_dists_mean_mean:       0.1851	mind_dist__agent0_mean:    0.1550	mind_dist__agent1_mean:    0.1678	mind_dist__agent2_mean:    0.2324
+q_taken_mean:            -67.8437	return_mean:             -44.6315	return_std:                9.2783	target_mean:             -68.2300
+td_error_abs:              8.8555	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.2111
+test_mind_dist__agent0_mean:  0.2804	test_mind_dist__agent1_mean:  0.1580	test_mind_dist__agent2_mean:  0.1949	test_return_mean:        -45.2713
+test_return_std:          10.2462	weight_norm:              57.5312	
+[INFO 17:56:31] my_main t_env: 152025 / 310000
+[INFO 17:56:31] my_main Estimated time left: 1 hours, 7 minutes, 51 seconds. Time passed: 1 hours, 5 minutes, 24 seconds
+[INFO 17:57:23] my_main Recent Stats | t_env:     154000 | Episode:     6160
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.7892	loss:                      0.2453
+min_dists_mean_mean:       0.1850	mind_dist__agent0_mean:    0.1610	mind_dist__agent1_mean:    0.1869	mind_dist__agent2_mean:    0.2070
+q_taken_mean:            -68.5900	return_mean:             -44.5336	return_std:                9.2458	target_mean:             -68.2840
+td_error_abs:              9.4569	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.2388
+test_mind_dist__agent0_mean:  0.2942	test_mind_dist__agent1_mean:  0.1353	test_mind_dist__agent2_mean:  0.2870	test_return_mean:        -45.0175
+test_return_std:           9.6827	weight_norm:              57.5468	
+[INFO 17:57:24] my_main t_env: 154025 / 310000
+[INFO 17:57:24] my_main Estimated time left: 1 hours, 8 minutes, 37 seconds. Time passed: 1 hours, 6 minutes, 17 seconds
+[INFO 17:58:16] my_main Recent Stats | t_env:     156000 | Episode:     6240
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.8060	loss:                      0.2407
+min_dists_mean_mean:       0.1771	mind_dist__agent0_mean:    0.1637	mind_dist__agent1_mean:    0.1758	mind_dist__agent2_mean:    0.1918
+q_taken_mean:            -69.1687	return_mean:             -44.0470	return_std:                8.9718	target_mean:             -69.0466
+td_error_abs:              9.3974	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.2300
+test_mind_dist__agent0_mean:  0.3074	test_mind_dist__agent1_mean:  0.1106	test_mind_dist__agent2_mean:  0.2721	test_return_mean:        -45.2377
+test_return_std:           9.7002	weight_norm:              57.5624	
+[INFO 17:58:17] my_main t_env: 156025 / 310000
+[INFO 17:58:17] my_main Estimated time left: 1 hours, 8 minutes, 20 seconds. Time passed: 1 hours, 7 minutes, 10 seconds
+[INFO 17:59:10] my_main Recent Stats | t_env:     158000 | Episode:     6320
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.6478	loss:                      0.2462
+min_dists_mean_mean:       0.1852	mind_dist__agent0_mean:    0.1819	mind_dist__agent1_mean:    0.1857	mind_dist__agent2_mean:    0.1880
+q_taken_mean:            -69.7951	return_mean:             -44.0632	return_std:                9.3597	target_mean:             -69.6706
+td_error_abs:              9.4364	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.2281
+test_mind_dist__agent0_mean:  0.2680	test_mind_dist__agent1_mean:  0.1081	test_mind_dist__agent2_mean:  0.3083	test_return_mean:        -44.3884
+test_return_std:           8.9482	weight_norm:              57.5780	
+[INFO 17:59:10] my_main t_env: 158025 / 310000
+[INFO 17:59:10] my_main Estimated time left: 1 hours, 7 minutes, 35 seconds. Time passed: 1 hours, 8 minutes, 3 seconds
+[INFO 18:00:02] my_main Recent Stats | t_env:     160000 | Episode:     6400
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.6105	loss:                      0.2384
+min_dists_mean_mean:       0.1800	mind_dist__agent0_mean:    0.2012	mind_dist__agent1_mean:    0.1823	mind_dist__agent2_mean:    0.1564
+q_taken_mean:            -69.7957	return_mean:             -44.0756	return_std:                9.3308	target_mean:             -69.7270
+td_error_abs:              9.3451	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.2110
+test_mind_dist__agent0_mean:  0.1230	test_mind_dist__agent1_mean:  0.1641	test_mind_dist__agent2_mean:  0.3460	test_return_mean:        -43.6140
+test_return_std:           8.6961	weight_norm:              57.5951	
+[INFO 18:00:03] my_main t_env: 160025 / 310000
+[INFO 18:00:03] my_main Estimated time left: 1 hours, 5 minutes, 39 seconds. Time passed: 1 hours, 8 minutes, 56 seconds
+[INFO 18:00:55] my_main Recent Stats | t_env:     162000 | Episode:     6480
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 3.3717	loss:                      0.2650
+min_dists_mean_mean:       0.1581	mind_dist__agent0_mean:    0.1893	mind_dist__agent1_mean:    0.1558	mind_dist__agent2_mean:    0.1292
+q_taken_mean:            -68.3885	return_mean:             -43.4677	return_std:                8.8215	target_mean:             -68.0402
+td_error_abs:              9.4108	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.2111
+test_mind_dist__agent0_mean:  0.1224	test_mind_dist__agent1_mean:  0.1752	test_mind_dist__agent2_mean:  0.3358	test_return_mean:        -43.8018
+test_return_std:           8.0110	weight_norm:              57.6105	
+[INFO 18:00:56] my_main t_env: 162025 / 310000
+[INFO 18:00:56] my_main Estimated time left: 1 hours, 5 minutes, 28 seconds. Time passed: 1 hours, 9 minutes, 49 seconds
+[INFO 18:01:48] my_main Recent Stats | t_env:     164000 | Episode:     6560
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.7727	loss:                      0.2481
+min_dists_mean_mean:       0.1627	mind_dist__agent0_mean:    0.1989	mind_dist__agent1_mean:    0.1604	mind_dist__agent2_mean:    0.1288
+q_taken_mean:            -67.1092	return_mean:             -43.4746	return_std:                8.6751	target_mean:             -67.4554
+td_error_abs:              8.8766	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1943
+test_mind_dist__agent0_mean:  0.1310	test_mind_dist__agent1_mean:  0.1708	test_mind_dist__agent2_mean:  0.2811	test_return_mean:        -43.3676
+test_return_std:           7.6538	weight_norm:              57.6272	
+[INFO 18:01:49] my_main t_env: 164025 / 310000
+[INFO 18:01:49] my_main Estimated time left: 1 hours, 4 minutes, 6 seconds. Time passed: 1 hours, 10 minutes, 42 seconds
+[INFO 18:02:41] my_main Recent Stats | t_env:     166000 | Episode:     6640
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.7804	loss:                      0.2627
+min_dists_mean_mean:       0.1731	mind_dist__agent0_mean:    0.1971	mind_dist__agent1_mean:    0.1619	mind_dist__agent2_mean:    0.1603
+q_taken_mean:            -67.9417	return_mean:             -43.9355	return_std:                9.1491	target_mean:             -68.1997
+td_error_abs:              9.2895	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.2321
+test_mind_dist__agent0_mean:  0.1480	test_mind_dist__agent1_mean:  0.2305	test_mind_dist__agent2_mean:  0.3178	test_return_mean:        -44.1914
+test_return_std:           7.5115	weight_norm:              57.6446	
+[INFO 18:02:42] my_main t_env: 166025 / 310000
+[INFO 18:02:42] my_main Estimated time left: 1 hours, 3 minutes, 47 seconds. Time passed: 1 hours, 11 minutes, 35 seconds
+[INFO 18:03:35] my_main Recent Stats | t_env:     168000 | Episode:     6720
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.8012	loss:                      0.2720
+min_dists_mean_mean:       0.1715	mind_dist__agent0_mean:    0.1999	mind_dist__agent1_mean:    0.1611	mind_dist__agent2_mean:    0.1536
+q_taken_mean:            -68.0115	return_mean:             -43.7529	return_std:                8.8698	target_mean:             -68.2807
+td_error_abs:              9.5253	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.2317
+test_mind_dist__agent0_mean:  0.1799	test_mind_dist__agent1_mean:  0.2678	test_mind_dist__agent2_mean:  0.2473	test_return_mean:        -44.7420
+test_return_std:           7.8683	weight_norm:              57.6625	
+[INFO 18:03:36] my_main t_env: 168025 / 310000
+[INFO 18:03:36] my_main Estimated time left: 1 hours, 3 minutes, 20 seconds. Time passed: 1 hours, 12 minutes, 28 seconds
+[INFO 18:04:29] my_main Recent Stats | t_env:     170000 | Episode:     6800
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.5495	loss:                      0.2566
+min_dists_mean_mean:       0.1676	mind_dist__agent0_mean:    0.1833	mind_dist__agent1_mean:    0.1613	mind_dist__agent2_mean:    0.1582
+q_taken_mean:            -67.2772	return_mean:             -43.6402	return_std:                8.8658	target_mean:             -67.3765
+td_error_abs:              9.1620	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1981
+test_mind_dist__agent0_mean:  0.1818	test_mind_dist__agent1_mean:  0.2065	test_mind_dist__agent2_mean:  0.2060	test_return_mean:        -44.8901
+test_return_std:           8.1864	weight_norm:              57.6801	
+[INFO 18:04:30] my_main t_env: 170025 / 310000
+[INFO 18:04:30] my_main Estimated time left: 1 hours, 3 minutes, 2 seconds. Time passed: 1 hours, 13 minutes, 23 seconds
+[INFO 18:05:20] my_main Recent Stats | t_env:     172000 | Episode:     6880
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.4919	loss:                      0.2601
+min_dists_mean_mean:       0.1755	mind_dist__agent0_mean:    0.1893	mind_dist__agent1_mean:    0.1666	mind_dist__agent2_mean:    0.1706
+q_taken_mean:            -68.8040	return_mean:             -43.9777	return_std:                9.1124	target_mean:             -68.9729
+td_error_abs:              9.3101	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1773
+test_mind_dist__agent0_mean:  0.1828	test_mind_dist__agent1_mean:  0.1888	test_mind_dist__agent2_mean:  0.1603	test_return_mean:        -44.6449
+test_return_std:           9.0100	weight_norm:              57.6977	
+[INFO 18:05:21] my_main t_env: 172025 / 310000
+[INFO 18:05:21] my_main Estimated time left: 59 minutes, 14 seconds. Time passed: 1 hours, 14 minutes, 14 seconds
+[INFO 18:06:13] my_main Recent Stats | t_env:     174000 | Episode:     6960
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.9615	loss:                      0.2824
+min_dists_mean_mean:       0.1696	mind_dist__agent0_mean:    0.1812	mind_dist__agent1_mean:    0.1502	mind_dist__agent2_mean:    0.1775
+q_taken_mean:            -69.3674	return_mean:             -43.7653	return_std:                8.9281	target_mean:             -69.4642
+td_error_abs:              9.6036	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1913
+test_mind_dist__agent0_mean:  0.1504	test_mind_dist__agent1_mean:  0.3008	test_mind_dist__agent2_mean:  0.1228	test_return_mean:        -44.1982
+test_return_std:           9.0170	weight_norm:              57.7135	
+[INFO 18:06:14] my_main t_env: 174025 / 310000
+[INFO 18:06:14] my_main Estimated time left: 59 minutes, 52 seconds. Time passed: 1 hours, 15 minutes, 7 seconds
+[INFO 18:07:07] my_main Recent Stats | t_env:     176000 | Episode:     7040
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.9320	loss:                      0.2773
+min_dists_mean_mean:       0.1547	mind_dist__agent0_mean:    0.1782	mind_dist__agent1_mean:    0.1324	mind_dist__agent2_mean:    0.1533
+q_taken_mean:            -68.9028	return_mean:             -42.9961	return_std:                8.7778	target_mean:             -68.8850
+td_error_abs:              9.4263	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1571
+test_mind_dist__agent0_mean:  0.1633	test_mind_dist__agent1_mean:  0.2223	test_mind_dist__agent2_mean:  0.0858	test_return_mean:        -42.9769
+test_return_std:           8.2519	weight_norm:              57.7303	
+[INFO 18:07:08] my_main t_env: 176025 / 310000
+[INFO 18:07:08] my_main Estimated time left: 1 hours, 25 seconds. Time passed: 1 hours, 16 minutes, 1 seconds
+[INFO 18:08:01] my_main Recent Stats | t_env:     178000 | Episode:     7120
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.8865	loss:                      0.2654
+min_dists_mean_mean:       0.1591	mind_dist__agent0_mean:    0.1736	mind_dist__agent1_mean:    0.1238	mind_dist__agent2_mean:    0.1798
+q_taken_mean:            -68.6420	return_mean:             -42.9157	return_std:                8.7483	target_mean:             -68.4976
+td_error_abs:              9.1386	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1515
+test_mind_dist__agent0_mean:  0.1358	test_mind_dist__agent1_mean:  0.2368	test_mind_dist__agent2_mean:  0.0821	test_return_mean:        -43.3797
+test_return_std:           8.2414	weight_norm:              57.7459	
+[INFO 18:08:02] my_main t_env: 178025 / 310000
+[INFO 18:08:02] my_main Estimated time left: 59 minutes, 9 seconds. Time passed: 1 hours, 16 minutes, 55 seconds
+[INFO 18:08:55] my_main Recent Stats | t_env:     180000 | Episode:     7200
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 3.1341	loss:                      0.2779
+min_dists_mean_mean:       0.1791	mind_dist__agent0_mean:    0.2005	mind_dist__agent1_mean:    0.1431	mind_dist__agent2_mean:    0.1938
+q_taken_mean:            -68.7664	return_mean:             -43.5360	return_std:                9.1849	target_mean:             -68.3901
+td_error_abs:              9.3976	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1662
+test_mind_dist__agent0_mean:  0.1419	test_mind_dist__agent1_mean:  0.2673	test_mind_dist__agent2_mean:  0.0896	test_return_mean:        -43.3236
+test_return_std:           7.9905	weight_norm:              57.7625	
+[INFO 18:08:55] my_main t_env: 180025 / 310000
+[INFO 18:08:55] my_main Estimated time left: 57 minutes, 57 seconds. Time passed: 1 hours, 17 minutes, 48 seconds
+[INFO 18:09:48] my_main Recent Stats | t_env:     182000 | Episode:     7280
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.6153	loss:                      0.2481
+min_dists_mean_mean:       0.1818	mind_dist__agent0_mean:    0.2017	mind_dist__agent1_mean:    0.1503	mind_dist__agent2_mean:    0.1934
+q_taken_mean:            -68.1367	return_mean:             -43.3711	return_std:                9.1798	target_mean:             -67.7896
+td_error_abs:              9.2148	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1827
+test_mind_dist__agent0_mean:  0.1408	test_mind_dist__agent1_mean:  0.3516	test_mind_dist__agent2_mean:  0.0555	test_return_mean:        -43.5565
+test_return_std:           7.6837	weight_norm:              57.7783	
+[INFO 18:09:48] my_main t_env: 182025 / 310000
+[INFO 18:09:48] my_main Estimated time left: 56 minutes, 30 seconds. Time passed: 1 hours, 18 minutes, 41 seconds
+[INFO 18:10:41] my_main Recent Stats | t_env:     184000 | Episode:     7360
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 1.9471	loss:                      0.2290
+min_dists_mean_mean:       0.1783	mind_dist__agent0_mean:    0.1817	mind_dist__agent1_mean:    0.1564	mind_dist__agent2_mean:    0.1969
+q_taken_mean:            -68.4525	return_mean:             -43.2468	return_std:                9.2305	target_mean:             -68.0425
+td_error_abs:              9.0194	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1438
+test_mind_dist__agent0_mean:  0.1373	test_mind_dist__agent1_mean:  0.2399	test_mind_dist__agent2_mean:  0.0544	test_return_mean:        -43.2643
+test_return_std:           7.5088	weight_norm:              57.7958	
+[INFO 18:10:42] my_main t_env: 184025 / 310000
+[INFO 18:10:42] my_main Estimated time left: 55 minutes, 48 seconds. Time passed: 1 hours, 19 minutes, 34 seconds
+[INFO 18:11:32] my_main Recent Stats | t_env:     186000 | Episode:     7440
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.1716	loss:                      0.2351
+min_dists_mean_mean:       0.1856	mind_dist__agent0_mean:    0.1882	mind_dist__agent1_mean:    0.1611	mind_dist__agent2_mean:    0.2074
+q_taken_mean:            -69.2189	return_mean:             -43.4655	return_std:                9.0602	target_mean:             -68.9044
+td_error_abs:              9.0336	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1506
+test_mind_dist__agent0_mean:  0.1184	test_mind_dist__agent1_mean:  0.2785	test_mind_dist__agent2_mean:  0.0548	test_return_mean:        -42.8320
+test_return_std:           7.4528	weight_norm:              57.8120	
+[INFO 18:11:33] my_main t_env: 186025 / 310000
+[INFO 18:11:33] my_main Estimated time left: 53 minutes, 2 seconds. Time passed: 1 hours, 20 minutes, 26 seconds
+[INFO 18:12:26] my_main Recent Stats | t_env:     188000 | Episode:     7520
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.2287	loss:                      0.2304
+min_dists_mean_mean:       0.1758	mind_dist__agent0_mean:    0.1957	mind_dist__agent1_mean:    0.1533	mind_dist__agent2_mean:    0.1784
+q_taken_mean:            -69.1244	return_mean:             -43.3643	return_std:                8.8347	target_mean:             -68.9385
+td_error_abs:              8.8966	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1526
+test_mind_dist__agent0_mean:  0.1655	test_mind_dist__agent1_mean:  0.2302	test_mind_dist__agent2_mean:  0.0620	test_return_mean:        -41.9083
+test_return_std:           7.2832	weight_norm:              57.8300	
+[INFO 18:12:26] my_main t_env: 188025 / 310000
+[INFO 18:12:26] my_main Estimated time left: 54 minutes, 31 seconds. Time passed: 1 hours, 21 minutes, 19 seconds
+[INFO 18:13:18] my_main Recent Stats | t_env:     190000 | Episode:     7600
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.0113	loss:                      0.2187
+min_dists_mean_mean:       0.1656	mind_dist__agent0_mean:    0.1771	mind_dist__agent1_mean:    0.1325	mind_dist__agent2_mean:    0.1872
+q_taken_mean:            -69.4350	return_mean:             -42.6854	return_std:                8.6048	target_mean:             -69.5194
+td_error_abs:              8.6146	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1796
+test_mind_dist__agent0_mean:  0.2436	test_mind_dist__agent1_mean:  0.2390	test_mind_dist__agent2_mean:  0.0562	test_return_mean:        -41.9012
+test_return_std:           7.3677	weight_norm:              57.8465	
+[INFO 18:13:19] my_main t_env: 190025 / 310000
+[INFO 18:13:19] my_main Estimated time left: 52 minutes, 26 seconds. Time passed: 1 hours, 22 minutes, 12 seconds
+[INFO 18:14:09] my_main Recent Stats | t_env:     192000 | Episode:     7680
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 1.9603	loss:                      0.2139
+min_dists_mean_mean:       0.1659	mind_dist__agent0_mean:    0.1864	mind_dist__agent1_mean:    0.1329	mind_dist__agent2_mean:    0.1784
+q_taken_mean:            -69.1612	return_mean:             -42.5118	return_std:                8.6295	target_mean:             -69.5512
+td_error_abs:              8.4780	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.2151
+test_mind_dist__agent0_mean:  0.3764	test_mind_dist__agent1_mean:  0.1694	test_mind_dist__agent2_mean:  0.0996	test_return_mean:        -42.2584
+test_return_std:           8.0359	weight_norm:              57.8626	
+[INFO 18:14:10] my_main t_env: 192025 / 310000
+[INFO 18:14:10] my_main Estimated time left: 49 minutes, 55 seconds. Time passed: 1 hours, 23 minutes, 3 seconds
+[INFO 18:15:01] my_main Recent Stats | t_env:     194000 | Episode:     7760
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 1.9606	loss:                      0.2208
+min_dists_mean_mean:       0.1660	mind_dist__agent0_mean:    0.1738	mind_dist__agent1_mean:    0.1470	mind_dist__agent2_mean:    0.1771
+q_taken_mean:            -69.9388	return_mean:             -42.7760	return_std:                9.0217	target_mean:             -70.3361
+td_error_abs:              8.6104	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.2509
+test_mind_dist__agent0_mean:  0.3818	test_mind_dist__agent1_mean:  0.2478	test_mind_dist__agent2_mean:  0.1229	test_return_mean:        -43.2205
+test_return_std:           9.3805	weight_norm:              57.8782	
+[INFO 18:15:02] my_main t_env: 194025 / 310000
+[INFO 18:15:02] my_main Estimated time left: 50 minutes, 11 seconds. Time passed: 1 hours, 23 minutes, 55 seconds
+[INFO 18:15:54] my_main Recent Stats | t_env:     196000 | Episode:     7840
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 1.7406	loss:                      0.2116
+min_dists_mean_mean:       0.1742	mind_dist__agent0_mean:    0.2013	mind_dist__agent1_mean:    0.1537	mind_dist__agent2_mean:    0.1677
+q_taken_mean:            -69.2363	return_mean:             -43.1743	return_std:                9.1858	target_mean:             -69.5054
+td_error_abs:              8.4834	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.2329
+test_mind_dist__agent0_mean:  0.3529	test_mind_dist__agent1_mean:  0.2241	test_mind_dist__agent2_mean:  0.1217	test_return_mean:        -43.2870
+test_return_std:           9.4742	weight_norm:              57.8957	
+[INFO 18:15:54] my_main t_env: 196025 / 310000
+[INFO 18:15:54] my_main Estimated time left: 50 minutes, 0 seconds. Time passed: 1 hours, 24 minutes, 47 seconds
+[INFO 18:16:46] my_main Recent Stats | t_env:     198000 | Episode:     7920
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 1.7368	loss:                      0.2135
+min_dists_mean_mean:       0.1772	mind_dist__agent0_mean:    0.1955	mind_dist__agent1_mean:    0.1684	mind_dist__agent2_mean:    0.1677
+q_taken_mean:            -69.6192	return_mean:             -43.1495	return_std:                9.5137	target_mean:             -69.7442
+td_error_abs:              8.6269	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.2336
+test_mind_dist__agent0_mean:  0.3091	test_mind_dist__agent1_mean:  0.2543	test_mind_dist__agent2_mean:  0.1375	test_return_mean:        -44.3083
+test_return_std:          10.0029	weight_norm:              57.9120	
+[INFO 18:16:46] my_main t_env: 198025 / 310000
+[INFO 18:16:46] my_main Estimated time left: 48 minutes, 27 seconds. Time passed: 1 hours, 25 minutes, 39 seconds
+[INFO 18:17:37] my_main Recent Stats | t_env:     200000 | Episode:     8000
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.1394	loss:                      0.2360
+min_dists_mean_mean:       0.1593	mind_dist__agent0_mean:    0.1796	mind_dist__agent1_mean:    0.1614	mind_dist__agent2_mean:    0.1370
+q_taken_mean:            -69.2688	return_mean:             -42.8969	return_std:                9.1778	target_mean:             -69.5116
+td_error_abs:              9.0304	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.2042
+test_mind_dist__agent0_mean:  0.2578	test_mind_dist__agent1_mean:  0.2172	test_mind_dist__agent2_mean:  0.1376	test_return_mean:        -44.3501
+test_return_std:           9.5952	weight_norm:              57.9282	
+[INFO 18:17:37] my_main t_env: 200025 / 310000
+[INFO 18:17:37] my_main Estimated time left: 46 minutes, 55 seconds. Time passed: 1 hours, 26 minutes, 30 seconds
+[INFO 18:18:30] my_main Recent Stats | t_env:     202000 | Episode:     8080
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.3578	loss:                      0.2498
+min_dists_mean_mean:       0.1594	mind_dist__agent0_mean:    0.1634	mind_dist__agent1_mean:    0.1728	mind_dist__agent2_mean:    0.1420
+q_taken_mean:            -69.6707	return_mean:             -42.8641	return_std:                8.8310	target_mean:             -69.9424
+td_error_abs:              9.2401	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1433
+test_mind_dist__agent0_mean:  0.1638	test_mind_dist__agent1_mean:  0.1743	test_mind_dist__agent2_mean:  0.0917	test_return_mean:        -43.5892
+test_return_std:           8.3199	weight_norm:              57.9473	
+[INFO 18:18:31] my_main t_env: 202025 / 310000
+[INFO 18:18:31] my_main Estimated time left: 47 minutes, 48 seconds. Time passed: 1 hours, 27 minutes, 24 seconds
+[INFO 18:19:22] my_main Recent Stats | t_env:     204000 | Episode:     8160
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.2316	loss:                      0.2286
+min_dists_mean_mean:       0.1573	mind_dist__agent0_mean:    0.1892	mind_dist__agent1_mean:    0.1538	mind_dist__agent2_mean:    0.1290
+q_taken_mean:            -67.6755	return_mean:             -42.5782	return_std:                8.6268	target_mean:             -67.9466
+td_error_abs:              8.7847	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1253
+test_mind_dist__agent0_mean:  0.1964	test_mind_dist__agent1_mean:  0.1074	test_mind_dist__agent2_mean:  0.0721	test_return_mean:        -42.9897
+test_return_std:           6.9201	weight_norm:              57.9666	
+[INFO 18:19:23] my_main t_env: 204025 / 310000
+[INFO 18:19:23] my_main Estimated time left: 45 minutes, 52 seconds. Time passed: 1 hours, 28 minutes, 15 seconds
+[INFO 18:20:14] my_main Recent Stats | t_env:     206000 | Episode:     8240
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.2253	loss:                      0.2225
+min_dists_mean_mean:       0.1573	mind_dist__agent0_mean:    0.1628	mind_dist__agent1_mean:    0.1601	mind_dist__agent2_mean:    0.1489
+q_taken_mean:            -67.2822	return_mean:             -42.5269	return_std:                8.7400	target_mean:             -67.7272
+td_error_abs:              8.6110	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1213
+test_mind_dist__agent0_mean:  0.1586	test_mind_dist__agent1_mean:  0.1303	test_mind_dist__agent2_mean:  0.0749	test_return_mean:        -43.1764
+test_return_std:           6.8816	weight_norm:              57.9848	
+[INFO 18:20:14] my_main t_env: 206025 / 310000
+[INFO 18:20:14] my_main Estimated time left: 44 minutes, 59 seconds. Time passed: 1 hours, 29 minutes, 7 seconds
+[INFO 18:21:06] my_main Recent Stats | t_env:     208000 | Episode:     8320
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.4863	loss:                      0.2294
+min_dists_mean_mean:       0.1460	mind_dist__agent0_mean:    0.1466	mind_dist__agent1_mean:    0.1423	mind_dist__agent2_mean:    0.1490
+q_taken_mean:            -66.8885	return_mean:             -42.2362	return_std:                8.0257	target_mean:             -67.6553
+td_error_abs:              8.6997	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1037
+test_mind_dist__agent0_mean:  0.1534	test_mind_dist__agent1_mean:  0.0983	test_mind_dist__agent2_mean:  0.0595	test_return_mean:        -42.3755
+test_return_std:           5.4811	weight_norm:              58.0023	
+[INFO 18:21:07] my_main t_env: 208025 / 310000
+[INFO 18:21:07] my_main Estimated time left: 44 minutes, 35 seconds. Time passed: 1 hours, 30 minutes, 0 seconds
+[INFO 18:21:59] my_main Recent Stats | t_env:     210000 | Episode:     8400
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.0375	loss:                      0.2075
+min_dists_mean_mean:       0.1459	mind_dist__agent0_mean:    0.1482	mind_dist__agent1_mean:    0.1418	mind_dist__agent2_mean:    0.1477
+q_taken_mean:            -65.9784	return_mean:             -42.3017	return_std:                7.9241	target_mean:             -66.6330
+td_error_abs:              8.3396	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.0967
+test_mind_dist__agent0_mean:  0.1216	test_mind_dist__agent1_mean:  0.1035	test_mind_dist__agent2_mean:  0.0649	test_return_mean:        -41.7453
+test_return_std:           5.6804	weight_norm:              58.0207	
+[INFO 18:22:00] my_main t_env: 210025 / 310000
+[INFO 18:22:00] my_main Estimated time left: 44 minutes, 6 seconds. Time passed: 1 hours, 30 minutes, 53 seconds
+[INFO 18:22:51] my_main Recent Stats | t_env:     212000 | Episode:     8480
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.0663	loss:                      0.1969
+min_dists_mean_mean:       0.1434	mind_dist__agent0_mean:    0.1583	mind_dist__agent1_mean:    0.1193	mind_dist__agent2_mean:    0.1527
+q_taken_mean:            -66.2614	return_mean:             -42.2526	return_std:                7.7248	target_mean:             -66.4831
+td_error_abs:              8.2722	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.0902
+test_mind_dist__agent0_mean:  0.0836	test_mind_dist__agent1_mean:  0.1001	test_mind_dist__agent2_mean:  0.0869	test_return_mean:        -41.4912
+test_return_std:           5.9808	weight_norm:              58.0376	
+[INFO 18:22:52] my_main t_env: 212025 / 310000
+[INFO 18:22:52] my_main Estimated time left: 42 minutes, 21 seconds. Time passed: 1 hours, 31 minutes, 45 seconds
+[INFO 18:23:42] my_main Recent Stats | t_env:     214000 | Episode:     8560
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.7935	loss:                      0.2153
+min_dists_mean_mean:       0.1277	mind_dist__agent0_mean:    0.1335	mind_dist__agent1_mean:    0.1056	mind_dist__agent2_mean:    0.1441
+q_taken_mean:            -67.4736	return_mean:             -42.0944	return_std:                7.6464	target_mean:             -67.3330
+td_error_abs:              8.5114	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1028
+test_mind_dist__agent0_mean:  0.0928	test_mind_dist__agent1_mean:  0.0924	test_mind_dist__agent2_mean:  0.1233	test_return_mean:        -41.8783
+test_return_std:           6.2193	weight_norm:              58.0544	
+[INFO 18:23:43] my_main t_env: 214025 / 310000
+[INFO 18:23:43] my_main Estimated time left: 40 minutes, 48 seconds. Time passed: 1 hours, 32 minutes, 36 seconds
+[INFO 18:24:34] my_main Recent Stats | t_env:     216000 | Episode:     8640
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.7653	loss:                      0.2279
+min_dists_mean_mean:       0.1192	mind_dist__agent0_mean:    0.1556	mind_dist__agent1_mean:    0.0857	mind_dist__agent2_mean:    0.1163
+q_taken_mean:            -68.3727	return_mean:             -41.9316	return_std:                7.5178	target_mean:             -68.2465
+td_error_abs:              8.8261	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1086
+test_mind_dist__agent0_mean:  0.1161	test_mind_dist__agent1_mean:  0.0579	test_mind_dist__agent2_mean:  0.1519	test_return_mean:        -42.3369
+test_return_std:           6.9810	weight_norm:              58.0719	
+[INFO 18:24:35] my_main t_env: 216025 / 310000
+[INFO 18:24:35] my_main Estimated time left: 40 minutes, 38 seconds. Time passed: 1 hours, 33 minutes, 28 seconds
+[INFO 18:25:26] my_main Recent Stats | t_env:     218000 | Episode:     8720
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.6438	loss:                      0.2361
+min_dists_mean_mean:       0.1182	mind_dist__agent0_mean:    0.1411	mind_dist__agent1_mean:    0.0766	mind_dist__agent2_mean:    0.1369
+q_taken_mean:            -68.6400	return_mean:             -41.6257	return_std:                7.6998	target_mean:             -68.2471
+td_error_abs:              8.9953	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1219
+test_mind_dist__agent0_mean:  0.1137	test_mind_dist__agent1_mean:  0.1011	test_mind_dist__agent2_mean:  0.1509	test_return_mean:        -41.8296
+test_return_std:           7.4730	weight_norm:              58.0905	
+[INFO 18:25:27] my_main t_env: 218025 / 310000
+[INFO 18:25:27] my_main Estimated time left: 40 minutes, 1 seconds. Time passed: 1 hours, 34 minutes, 20 seconds
+[INFO 18:26:19] my_main Recent Stats | t_env:     220000 | Episode:     8800
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.8325	loss:                      0.2335
+min_dists_mean_mean:       0.1302	mind_dist__agent0_mean:    0.1379	mind_dist__agent1_mean:    0.0867	mind_dist__agent2_mean:    0.1659
+q_taken_mean:            -69.8377	return_mean:             -41.8766	return_std:                7.8566	target_mean:             -69.5424
+td_error_abs:              8.9286	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1378
+test_mind_dist__agent0_mean:  0.1222	test_mind_dist__agent1_mean:  0.1423	test_mind_dist__agent2_mean:  0.1489	test_return_mean:        -42.6951
+test_return_std:           9.0754	weight_norm:              58.1081	
+[INFO 18:26:20] my_main t_env: 220025 / 310000
+[INFO 18:26:20] my_main Estimated time left: 39 minutes, 54 seconds. Time passed: 1 hours, 35 minutes, 13 seconds
+[INFO 18:27:12] my_main Recent Stats | t_env:     222000 | Episode:     8880
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.4289	loss:                      0.2183
+min_dists_mean_mean:       0.1178	mind_dist__agent0_mean:    0.1164	mind_dist__agent1_mean:    0.0881	mind_dist__agent2_mean:    0.1489
+q_taken_mean:            -69.3215	return_mean:             -41.6473	return_std:                8.0908	target_mean:             -69.3329
+td_error_abs:              8.5174	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1459
+test_mind_dist__agent0_mean:  0.1245	test_mind_dist__agent1_mean:  0.1795	test_mind_dist__agent2_mean:  0.1337	test_return_mean:        -42.0804
+test_return_std:           8.5918	weight_norm:              58.1252	
+[INFO 18:27:13] my_main t_env: 222025 / 310000
+[INFO 18:27:13] my_main Estimated time left: 38 minutes, 51 seconds. Time passed: 1 hours, 36 minutes, 6 seconds
+[INFO 18:28:05] my_main Recent Stats | t_env:     224000 | Episode:     8960
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 1.7532	loss:                      0.1947
+min_dists_mean_mean:       0.1211	mind_dist__agent0_mean:    0.1107	mind_dist__agent1_mean:    0.1050	mind_dist__agent2_mean:    0.1477
+q_taken_mean:            -69.2388	return_mean:             -41.6943	return_std:                7.9367	target_mean:             -69.5376
+td_error_abs:              8.1997	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1615
+test_mind_dist__agent0_mean:  0.1557	test_mind_dist__agent1_mean:  0.2329	test_mind_dist__agent2_mean:  0.0959	test_return_mean:        -41.7741
+test_return_std:           8.7020	weight_norm:              58.1428	
+[INFO 18:28:05] my_main t_env: 224025 / 310000
+[INFO 18:28:05] my_main Estimated time left: 37 minutes, 23 seconds. Time passed: 1 hours, 36 minutes, 58 seconds
+[INFO 18:28:57] my_main Recent Stats | t_env:     226000 | Episode:     9040
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 1.9336	loss:                      0.2038
+min_dists_mean_mean:       0.1132	mind_dist__agent0_mean:    0.0878	mind_dist__agent1_mean:    0.0983	mind_dist__agent2_mean:    0.1537
+q_taken_mean:            -68.6874	return_mean:             -41.5124	return_std:                7.7520	target_mean:             -68.9678
+td_error_abs:              8.3071	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1460
+test_mind_dist__agent0_mean:  0.1318	test_mind_dist__agent1_mean:  0.2365	test_mind_dist__agent2_mean:  0.0697	test_return_mean:        -40.5174
+test_return_std:           7.3873	weight_norm:              58.1585	
+[INFO 18:28:58] my_main t_env: 226025 / 310000
+[INFO 18:28:58] my_main Estimated time left: 36 minutes, 43 seconds. Time passed: 1 hours, 37 minutes, 51 seconds
+[INFO 18:29:49] my_main Recent Stats | t_env:     228000 | Episode:     9120
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.1088	loss:                      0.2085
+min_dists_mean_mean:       0.1079	mind_dist__agent0_mean:    0.0944	mind_dist__agent1_mean:    0.1124	mind_dist__agent2_mean:    0.1169
+q_taken_mean:            -69.0793	return_mean:             -41.5589	return_std:                7.4205	target_mean:             -69.4435
+td_error_abs:              8.1797	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1304
+test_mind_dist__agent0_mean:  0.1348	test_mind_dist__agent1_mean:  0.1942	test_mind_dist__agent2_mean:  0.0620	test_return_mean:        -40.7598
+test_return_std:           7.2537	weight_norm:              58.1756	
+[INFO 18:29:50] my_main t_env: 228025 / 310000
+[INFO 18:29:50] my_main Estimated time left: 35 minutes, 22 seconds. Time passed: 1 hours, 38 minutes, 42 seconds
+[INFO 18:30:41] my_main Recent Stats | t_env:     230000 | Episode:     9200
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 1.9599	loss:                      0.2095
+min_dists_mean_mean:       0.0980	mind_dist__agent0_mean:    0.0921	mind_dist__agent1_mean:    0.1067	mind_dist__agent2_mean:    0.0954
+q_taken_mean:            -69.5068	return_mean:             -40.9683	return_std:                7.0754	target_mean:             -69.5617
+td_error_abs:              8.2716	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1156
+test_mind_dist__agent0_mean:  0.1332	test_mind_dist__agent1_mean:  0.1481	test_mind_dist__agent2_mean:  0.0656	test_return_mean:        -40.1216
+test_return_std:           5.4620	weight_norm:              58.1918	
+[INFO 18:30:42] my_main t_env: 230025 / 310000
+[INFO 18:30:42] my_main Estimated time left: 34 minutes, 53 seconds. Time passed: 1 hours, 39 minutes, 35 seconds
+[INFO 18:31:33] my_main Recent Stats | t_env:     232000 | Episode:     9280
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.1318	loss:                      0.2154
+min_dists_mean_mean:       0.0905	mind_dist__agent0_mean:    0.0866	mind_dist__agent1_mean:    0.1005	mind_dist__agent2_mean:    0.0845
+q_taken_mean:            -69.7469	return_mean:             -41.0546	return_std:                7.0434	target_mean:             -69.8725
+td_error_abs:              8.4129	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1026
+test_mind_dist__agent0_mean:  0.1285	test_mind_dist__agent1_mean:  0.1180	test_mind_dist__agent2_mean:  0.0613	test_return_mean:        -40.2159
+test_return_std:           5.9156	weight_norm:              58.2095	
+[INFO 18:31:34] my_main t_env: 232025 / 310000
+[INFO 18:31:34] my_main Estimated time left: 33 minutes, 56 seconds. Time passed: 1 hours, 40 minutes, 27 seconds
+[INFO 18:32:25] my_main Recent Stats | t_env:     234000 | Episode:     9360
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.3475	loss:                      0.2333
+min_dists_mean_mean:       0.0820	mind_dist__agent0_mean:    0.0863	mind_dist__agent1_mean:    0.0802	mind_dist__agent2_mean:    0.0794
+q_taken_mean:            -70.5670	return_mean:             -40.7512	return_std:                6.8347	target_mean:             -70.5855
+td_error_abs:              8.8174	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.0623
+test_mind_dist__agent0_mean:  0.0487	test_mind_dist__agent1_mean:  0.0778	test_mind_dist__agent2_mean:  0.0605	test_return_mean:        -39.8628
+test_return_std:           5.5763	weight_norm:              58.2249	
+[INFO 18:32:26] my_main t_env: 234025 / 310000
+[INFO 18:32:26] my_main Estimated time left: 32 minutes, 34 seconds. Time passed: 1 hours, 41 minutes, 19 seconds
+[INFO 18:33:18] my_main Recent Stats | t_env:     236000 | Episode:     9440
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.5860	loss:                      0.2196
+min_dists_mean_mean:       0.0753	mind_dist__agent0_mean:    0.0714	mind_dist__agent1_mean:    0.0861	mind_dist__agent2_mean:    0.0683
+q_taken_mean:            -71.3661	return_mean:             -40.5567	return_std:                6.5853	target_mean:             -71.0306
+td_error_abs:              8.6692	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.0609
+test_mind_dist__agent0_mean:  0.0507	test_mind_dist__agent1_mean:  0.0688	test_mind_dist__agent2_mean:  0.0632	test_return_mean:        -40.2837
+test_return_std:           5.7393	weight_norm:              58.2421	
+[INFO 18:33:18] my_main t_env: 236025 / 310000
+[INFO 18:33:18] my_main Estimated time left: 32 minutes, 28 seconds. Time passed: 1 hours, 42 minutes, 11 seconds
+[INFO 18:34:10] my_main Recent Stats | t_env:     238000 | Episode:     9520
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.3279	loss:                      0.1989
+min_dists_mean_mean:       0.0789	mind_dist__agent0_mean:    0.0783	mind_dist__agent1_mean:    0.0828	mind_dist__agent2_mean:    0.0755
+q_taken_mean:            -70.9175	return_mean:             -40.5072	return_std:                6.6913	target_mean:             -70.3878
+td_error_abs:              8.4457	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.0616
+test_mind_dist__agent0_mean:  0.0498	test_mind_dist__agent1_mean:  0.0656	test_mind_dist__agent2_mean:  0.0695	test_return_mean:        -39.9491
+test_return_std:           5.3594	weight_norm:              58.2584	
+[INFO 18:34:11] my_main t_env: 238025 / 310000
+[INFO 18:34:11] my_main Estimated time left: 31 minutes, 41 seconds. Time passed: 1 hours, 43 minutes, 4 seconds
+[INFO 18:35:04] my_main Recent Stats | t_env:     240000 | Episode:     9600
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.3611	loss:                      0.1961
+min_dists_mean_mean:       0.0738	mind_dist__agent0_mean:    0.0804	mind_dist__agent1_mean:    0.0753	mind_dist__agent2_mean:    0.0658
+q_taken_mean:            -70.9168	return_mean:             -40.2118	return_std:                6.5521	target_mean:             -70.3905
+td_error_abs:              8.3212	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.0572
+test_mind_dist__agent0_mean:  0.0415	test_mind_dist__agent1_mean:  0.0638	test_mind_dist__agent2_mean:  0.0662	test_return_mean:        -39.4830
+test_return_std:           5.6915	weight_norm:              58.2764	
+[INFO 18:35:05] my_main t_env: 240025 / 310000
+[INFO 18:35:05] my_main Estimated time left: 31 minutes, 20 seconds. Time passed: 1 hours, 43 minutes, 58 seconds
+[INFO 18:35:57] my_main Recent Stats | t_env:     242000 | Episode:     9680
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.2884	loss:                      0.1973
+min_dists_mean_mean:       0.0730	mind_dist__agent0_mean:    0.0804	mind_dist__agent1_mean:    0.0705	mind_dist__agent2_mean:    0.0682
+q_taken_mean:            -71.3089	return_mean:             -40.0335	return_std:                6.0210	target_mean:             -70.5456
+td_error_abs:              8.3697	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.0525
+test_mind_dist__agent0_mean:  0.0393	test_mind_dist__agent1_mean:  0.0552	test_mind_dist__agent2_mean:  0.0631	test_return_mean:        -39.5992
+test_return_std:           5.2706	weight_norm:              58.2939	
+[INFO 18:35:58] my_main t_env: 242025 / 310000
+[INFO 18:35:58] my_main Estimated time left: 30 minutes, 4 seconds. Time passed: 1 hours, 44 minutes, 51 seconds
+[INFO 18:36:52] my_main Recent Stats | t_env:     244000 | Episode:     9760
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.1570	loss:                      0.1822
+min_dists_mean_mean:       0.0752	mind_dist__agent0_mean:    0.0814	mind_dist__agent1_mean:    0.0758	mind_dist__agent2_mean:    0.0684
+q_taken_mean:            -70.2382	return_mean:             -40.0215	return_std:                6.1595	target_mean:             -69.7431
+td_error_abs:              7.8951	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.0466
+test_mind_dist__agent0_mean:  0.0417	test_mind_dist__agent1_mean:  0.0381	test_mind_dist__agent2_mean:  0.0600	test_return_mean:        -39.0096
+test_return_std:           4.9715	weight_norm:              58.3113	
+[INFO 18:36:52] my_main t_env: 244025 / 310000
+[INFO 18:36:52] my_main Estimated time left: 29 minutes, 52 seconds. Time passed: 1 hours, 45 minutes, 45 seconds
+[INFO 18:37:45] my_main Recent Stats | t_env:     246000 | Episode:     9840
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 1.5978	loss:                      0.1629
+min_dists_mean_mean:       0.0702	mind_dist__agent0_mean:    0.0773	mind_dist__agent1_mean:    0.0692	mind_dist__agent2_mean:    0.0642
+q_taken_mean:            -69.4834	return_mean:             -39.9252	return_std:                6.4180	target_mean:             -69.2653
+td_error_abs:              7.3777	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.0472
+test_mind_dist__agent0_mean:  0.0422	test_mind_dist__agent1_mean:  0.0482	test_mind_dist__agent2_mean:  0.0511	test_return_mean:        -38.6040
+test_return_std:           5.0973	weight_norm:              58.3285	
+[INFO 18:37:45] my_main t_env: 246025 / 310000
+[INFO 18:37:45] my_main Estimated time left: 28 minutes, 21 seconds. Time passed: 1 hours, 46 minutes, 38 seconds
+[INFO 18:38:37] my_main Recent Stats | t_env:     248000 | Episode:     9920
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 1.4486	loss:                      0.1605
+min_dists_mean_mean:       0.0621	mind_dist__agent0_mean:    0.0627	mind_dist__agent1_mean:    0.0639	mind_dist__agent2_mean:    0.0597
+q_taken_mean:            -69.1007	return_mean:             -39.7828	return_std:                6.4116	target_mean:             -69.0645
+td_error_abs:              7.3399	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.0479
+test_mind_dist__agent0_mean:  0.0451	test_mind_dist__agent1_mean:  0.0523	test_mind_dist__agent2_mean:  0.0464	test_return_mean:        -38.3512
+test_return_std:           5.3549	weight_norm:              58.3451	
+[INFO 18:38:38] my_main t_env: 248025 / 310000
+[INFO 18:38:38] my_main Estimated time left: 26 minutes, 57 seconds. Time passed: 1 hours, 47 minutes, 31 seconds
+[INFO 18:39:30] my_main Recent Stats | t_env:     250000 | Episode:    10000
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 1.7031	loss:                      0.1737
+min_dists_mean_mean:       0.0611	mind_dist__agent0_mean:    0.0559	mind_dist__agent1_mean:    0.0644	mind_dist__agent2_mean:    0.0630
+q_taken_mean:            -69.3885	return_mean:             -40.5109	return_std:                6.8770	target_mean:             -69.2285
+td_error_abs:              7.6032	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.0500
+test_mind_dist__agent0_mean:  0.0553	test_mind_dist__agent1_mean:  0.0524	test_mind_dist__agent2_mean:  0.0423	test_return_mean:        -38.5952
+test_return_std:           6.5028	weight_norm:              58.3618	
+[INFO 18:39:31] my_main t_env: 250025 / 310000
+[INFO 18:39:31] my_main Estimated time left: 26 minutes, 41 seconds. Time passed: 1 hours, 48 minutes, 24 seconds
+[INFO 18:40:23] my_main Recent Stats | t_env:     252000 | Episode:    10080
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 3.2638	loss:                      0.2317
+min_dists_mean_mean:       0.0615	mind_dist__agent0_mean:    0.0633	mind_dist__agent1_mean:    0.0623	mind_dist__agent2_mean:    0.0589
+q_taken_mean:            -69.7172	return_mean:             -40.2460	return_std:                7.1874	target_mean:             -68.9861
+td_error_abs:              8.3031	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.0781
+test_mind_dist__agent0_mean:  0.1358	test_mind_dist__agent1_mean:  0.0560	test_mind_dist__agent2_mean:  0.0425	test_return_mean:        -38.9031
+test_return_std:           6.5458	weight_norm:              58.3790	
+[INFO 18:40:24] my_main t_env: 252025 / 310000
+[INFO 18:40:24] my_main Estimated time left: 25 minutes, 26 seconds. Time passed: 1 hours, 49 minutes, 17 seconds
+[INFO 18:41:16] my_main Recent Stats | t_env:     254000 | Episode:    10160
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 3.2749	loss:                      0.2338
+min_dists_mean_mean:       0.0702	mind_dist__agent0_mean:    0.0735	mind_dist__agent1_mean:    0.0635	mind_dist__agent2_mean:    0.0735
+q_taken_mean:            -69.2015	return_mean:             -40.5362	return_std:                7.2016	target_mean:             -68.5060
+td_error_abs:              8.3670	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.0821
+test_mind_dist__agent0_mean:  0.1397	test_mind_dist__agent1_mean:  0.0577	test_mind_dist__agent2_mean:  0.0490	test_return_mean:        -39.4824
+test_return_std:           6.9683	weight_norm:              58.3978	
+[INFO 18:41:17] my_main t_env: 254025 / 310000
+[INFO 18:41:17] my_main Estimated time left: 24 minutes, 46 seconds. Time passed: 1 hours, 50 minutes, 10 seconds
+[INFO 18:42:08] my_main Recent Stats | t_env:     256000 | Episode:    10240
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 3.6850	loss:                      0.2545
+min_dists_mean_mean:       0.0701	mind_dist__agent0_mean:    0.0744	mind_dist__agent1_mean:    0.0632	mind_dist__agent2_mean:    0.0727
+q_taken_mean:            -69.4479	return_mean:             -40.7145	return_std:                8.2013	target_mean:             -68.7524
+td_error_abs:              8.7695	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.0805
+test_mind_dist__agent0_mean:  0.1360	test_mind_dist__agent1_mean:  0.0463	test_mind_dist__agent2_mean:  0.0593	test_return_mean:        -40.2547
+test_return_std:           7.0419	weight_norm:              58.4144	
+[INFO 18:42:09] my_main t_env: 256025 / 310000
+[INFO 18:42:09] my_main Estimated time left: 23 minutes, 28 seconds. Time passed: 1 hours, 51 minutes, 2 seconds
+[INFO 18:43:00] my_main Recent Stats | t_env:     258000 | Episode:    10320
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 3.8712	loss:                      0.2540
+min_dists_mean_mean:       0.0687	mind_dist__agent0_mean:    0.0732	mind_dist__agent1_mean:    0.0574	mind_dist__agent2_mean:    0.0756
+q_taken_mean:            -70.1430	return_mean:             -40.7686	return_std:                8.1746	target_mean:             -69.5571
+td_error_abs:              8.7100	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.0799
+test_mind_dist__agent0_mean:  0.1338	test_mind_dist__agent1_mean:  0.0437	test_mind_dist__agent2_mean:  0.0623	test_return_mean:        -41.2874
+test_return_std:           7.1847	weight_norm:              58.4319	
+[INFO 18:43:01] my_main t_env: 258025 / 310000
+[INFO 18:43:01] my_main Estimated time left: 22 minutes, 22 seconds. Time passed: 1 hours, 51 minutes, 54 seconds
+[INFO 18:43:52] my_main Recent Stats | t_env:     260000 | Episode:    10400
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 3.7218	loss:                      0.2467
+min_dists_mean_mean:       0.0688	mind_dist__agent0_mean:    0.0782	mind_dist__agent1_mean:    0.0533	mind_dist__agent2_mean:    0.0750
+q_taken_mean:            -69.4097	return_mean:             -40.4831	return_std:                7.8671	target_mean:             -69.2537
+td_error_abs:              8.4669	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.0767
+test_mind_dist__agent0_mean:  0.1232	test_mind_dist__agent1_mean:  0.0468	test_mind_dist__agent2_mean:  0.0601	test_return_mean:        -40.6280
+test_return_std:           5.6604	weight_norm:              58.4475	
+[INFO 18:43:53] my_main t_env: 260025 / 310000
+[INFO 18:43:53] my_main Estimated time left: 21 minutes, 36 seconds. Time passed: 1 hours, 52 minutes, 46 seconds
+[INFO 18:44:44] my_main Recent Stats | t_env:     262000 | Episode:    10480
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.5709	loss:                      0.1848
+min_dists_mean_mean:       0.0711	mind_dist__agent0_mean:    0.0775	mind_dist__agent1_mean:    0.0545	mind_dist__agent2_mean:    0.0814
+q_taken_mean:            -69.1370	return_mean:             -40.6153	return_std:                7.6275	target_mean:             -69.3562
+td_error_abs:              7.7433	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.0844
+test_mind_dist__agent0_mean:  0.1033	test_mind_dist__agent1_mean:  0.0436	test_mind_dist__agent2_mean:  0.1062	test_return_mean:        -42.5035
+test_return_std:           7.6951	weight_norm:              58.4640	
+[INFO 18:44:45] my_main t_env: 262025 / 310000
+[INFO 18:44:45] my_main Estimated time left: 20 minutes, 57 seconds. Time passed: 1 hours, 53 minutes, 38 seconds
+[INFO 18:45:37] my_main Recent Stats | t_env:     264000 | Episode:    10560
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.5094	loss:                      0.1733
+min_dists_mean_mean:       0.0639	mind_dist__agent0_mean:    0.0736	mind_dist__agent1_mean:    0.0504	mind_dist__agent2_mean:    0.0678
+q_taken_mean:            -69.5725	return_mean:             -40.2920	return_std:                7.5015	target_mean:             -69.5317
+td_error_abs:              7.5301	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.0861
+test_mind_dist__agent0_mean:  0.1093	test_mind_dist__agent1_mean:  0.0453	test_mind_dist__agent2_mean:  0.1036	test_return_mean:        -42.2990
+test_return_std:           7.2608	weight_norm:              58.4793	
+[INFO 18:45:38] my_main t_env: 264025 / 310000
+[INFO 18:45:38] my_main Estimated time left: 20 minutes, 20 seconds. Time passed: 1 hours, 54 minutes, 31 seconds
+[INFO 18:46:30] my_main Recent Stats | t_env:     266000 | Episode:    10640
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.4764	loss:                      0.1691
+min_dists_mean_mean:       0.0692	mind_dist__agent0_mean:    0.0819	mind_dist__agent1_mean:    0.0484	mind_dist__agent2_mean:    0.0774
+q_taken_mean:            -70.0072	return_mean:             -40.3418	return_std:                6.1403	target_mean:             -69.8400
+td_error_abs:              7.5407	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.0846
+test_mind_dist__agent0_mean:  0.1146	test_mind_dist__agent1_mean:  0.0448	test_mind_dist__agent2_mean:  0.0946	test_return_mean:        -41.7212
+test_return_std:           7.5440	weight_norm:              58.4957	
+[INFO 18:46:31] my_main t_env: 266025 / 310000
+[INFO 18:46:31] my_main Estimated time left: 19 minutes, 24 seconds. Time passed: 1 hours, 55 minutes, 24 seconds
+[INFO 18:47:23] my_main Recent Stats | t_env:     268000 | Episode:    10720
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.2319	loss:                      0.1658
+min_dists_mean_mean:       0.0715	mind_dist__agent0_mean:    0.0839	mind_dist__agent1_mean:    0.0531	mind_dist__agent2_mean:    0.0775
+q_taken_mean:            -70.2167	return_mean:             -40.3902	return_std:                6.5512	target_mean:             -69.8952
+td_error_abs:              7.5354	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.0836
+test_mind_dist__agent0_mean:  0.1134	test_mind_dist__agent1_mean:  0.0469	test_mind_dist__agent2_mean:  0.0906	test_return_mean:        -40.9581
+test_return_std:           7.5234	weight_norm:              58.5109	
+[INFO 18:47:24] my_main t_env: 268025 / 310000
+[INFO 18:47:24] my_main Estimated time left: 18 minutes, 30 seconds. Time passed: 1 hours, 56 minutes, 17 seconds
+[INFO 18:48:16] my_main Recent Stats | t_env:     270000 | Episode:    10800
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.1335	loss:                      0.1577
+min_dists_mean_mean:       0.0765	mind_dist__agent0_mean:    0.0815	mind_dist__agent1_mean:    0.0658	mind_dist__agent2_mean:    0.0821
+q_taken_mean:            -70.4482	return_mean:             -40.6945	return_std:                7.2030	target_mean:             -69.8455
+td_error_abs:              7.4001	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.0869
+test_mind_dist__agent0_mean:  0.1192	test_mind_dist__agent1_mean:  0.0520	test_mind_dist__agent2_mean:  0.0896	test_return_mean:        -41.6262
+test_return_std:           7.5724	weight_norm:              58.5277	
+[INFO 18:48:16] my_main t_env: 270025 / 310000
+[INFO 18:48:16] my_main Estimated time left: 17 minutes, 27 seconds. Time passed: 1 hours, 57 minutes, 9 seconds
+[INFO 18:49:07] my_main Recent Stats | t_env:     272000 | Episode:    10880
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 1.5815	loss:                      0.1509
+min_dists_mean_mean:       0.0740	mind_dist__agent0_mean:    0.0793	mind_dist__agent1_mean:    0.0671	mind_dist__agent2_mean:    0.0756
+q_taken_mean:            -69.8913	return_mean:             -40.8592	return_std:                7.5329	target_mean:             -69.6617
+td_error_abs:              7.0992	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.0510
+test_mind_dist__agent0_mean:  0.0588	test_mind_dist__agent1_mean:  0.0488	test_mind_dist__agent2_mean:  0.0455	test_return_mean:        -39.1501
+test_return_std:           5.2708	weight_norm:              58.5431	
+[INFO 18:49:08] my_main t_env: 272025 / 310000
+[INFO 18:49:08] my_main Estimated time left: 16 minutes, 22 seconds. Time passed: 1 hours, 58 minutes, 1 seconds
+[INFO 18:50:00] my_main Recent Stats | t_env:     274000 | Episode:    10960
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 1.6083	loss:                      0.1526
+min_dists_mean_mean:       0.0733	mind_dist__agent0_mean:    0.0791	mind_dist__agent1_mean:    0.0662	mind_dist__agent2_mean:    0.0745
+q_taken_mean:            -70.1974	return_mean:             -41.0261	return_std:                7.6325	target_mean:             -70.1491
+td_error_abs:              7.1510	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.0447
+test_mind_dist__agent0_mean:  0.0457	test_mind_dist__agent1_mean:  0.0450	test_mind_dist__agent2_mean:  0.0434	test_return_mean:        -38.7735
+test_return_std:           5.8335	weight_norm:              58.5586	
+[INFO 18:50:00] my_main t_env: 274025 / 310000
+[INFO 18:50:00] my_main Estimated time left: 15 minutes, 41 seconds. Time passed: 1 hours, 58 minutes, 53 seconds
+[INFO 18:50:51] my_main Recent Stats | t_env:     276000 | Episode:    11040
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 1.6734	loss:                      0.1584
+min_dists_mean_mean:       0.0717	mind_dist__agent0_mean:    0.0735	mind_dist__agent1_mean:    0.0698	mind_dist__agent2_mean:    0.0719
+q_taken_mean:            -69.9334	return_mean:             -40.8075	return_std:                8.1129	target_mean:             -70.0509
+td_error_abs:              7.2417	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.0595
+test_mind_dist__agent0_mean:  0.0852	test_mind_dist__agent1_mean:  0.0476	test_mind_dist__agent2_mean:  0.0458	test_return_mean:        -40.6520
+test_return_std:           7.4572	weight_norm:              58.5752	
+[INFO 18:50:51] my_main t_env: 276025 / 310000
+[INFO 18:50:51] my_main Estimated time left: 14 minutes, 24 seconds. Time passed: 1 hours, 59 minutes, 44 seconds
+[INFO 18:51:42] my_main Recent Stats | t_env:     278000 | Episode:    11120
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.2334	loss:                      0.1646
+min_dists_mean_mean:       0.0704	mind_dist__agent0_mean:    0.0709	mind_dist__agent1_mean:    0.0716	mind_dist__agent2_mean:    0.0685
+q_taken_mean:            -69.3482	return_mean:             -40.6560	return_std:                7.6362	target_mean:             -69.7888
+td_error_abs:              7.3165	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.0564
+test_mind_dist__agent0_mean:  0.0835	test_mind_dist__agent1_mean:  0.0416	test_mind_dist__agent2_mean:  0.0441	test_return_mean:        -40.9677
+test_return_std:           7.4161	weight_norm:              58.5917	
+[INFO 18:51:43] my_main t_env: 278025 / 310000
+[INFO 18:51:43] my_main Estimated time left: 13 minutes, 41 seconds. Time passed: 2 hours, 36 seconds
+[INFO 18:52:33] my_main Recent Stats | t_env:     280000 | Episode:    11200
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.0790	loss:                      0.1588
+min_dists_mean_mean:       0.0636	mind_dist__agent0_mean:    0.0723	mind_dist__agent1_mean:    0.0594	mind_dist__agent2_mean:    0.0591
+q_taken_mean:            -69.2522	return_mean:             -40.0775	return_std:                7.0593	target_mean:             -69.7681
+td_error_abs:              7.2193	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.0910
+test_mind_dist__agent0_mean:  0.1386	test_mind_dist__agent1_mean:  0.0779	test_mind_dist__agent2_mean:  0.0563	test_return_mean:        -42.3771
+test_return_std:           9.6117	weight_norm:              58.6079	
+[INFO 18:52:34] my_main t_env: 280025 / 310000
+[INFO 18:52:34] my_main Estimated time left: 12 minutes, 45 seconds. Time passed: 2 hours, 1 minutes, 27 seconds
+[INFO 18:53:24] my_main Recent Stats | t_env:     282000 | Episode:    11280
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.5689	loss:                      0.1736
+min_dists_mean_mean:       0.0629	mind_dist__agent0_mean:    0.0700	mind_dist__agent1_mean:    0.0591	mind_dist__agent2_mean:    0.0595
+q_taken_mean:            -69.9204	return_mean:             -40.0633	return_std:                6.8986	target_mean:             -70.5674
+td_error_abs:              7.5156	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1205
+test_mind_dist__agent0_mean:  0.1466	test_mind_dist__agent1_mean:  0.0835	test_mind_dist__agent2_mean:  0.1315	test_return_mean:        -43.7357
+test_return_std:          11.4204	weight_norm:              58.6252	
+[INFO 18:53:25] my_main t_env: 282025 / 310000
+[INFO 18:53:25] my_main Estimated time left: 11 minutes, 51 seconds. Time passed: 2 hours, 2 minutes, 18 seconds
+[INFO 18:54:15] my_main Recent Stats | t_env:     284000 | Episode:    11360
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 3.0080	loss:                      0.1998
+min_dists_mean_mean:       0.0608	mind_dist__agent0_mean:    0.0623	mind_dist__agent1_mean:    0.0560	mind_dist__agent2_mean:    0.0641
+q_taken_mean:            -70.9155	return_mean:             -39.7604	return_std:                6.6235	target_mean:             -71.6729
+td_error_abs:              7.9806	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1282
+test_mind_dist__agent0_mean:  0.1507	test_mind_dist__agent1_mean:  0.0841	test_mind_dist__agent2_mean:  0.1498	test_return_mean:        -44.0672
+test_return_std:          11.5896	weight_norm:              58.6429	
+[INFO 18:54:15] my_main t_env: 284025 / 310000
+[INFO 18:54:15] my_main Estimated time left: 11 minutes, 1 seconds. Time passed: 2 hours, 3 minutes, 8 seconds
+[INFO 18:55:06] my_main Recent Stats | t_env:     286000 | Episode:    11440
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.6847	loss:                      0.1804
+min_dists_mean_mean:       0.0580	mind_dist__agent0_mean:    0.0545	mind_dist__agent1_mean:    0.0611	mind_dist__agent2_mean:    0.0585
+q_taken_mean:            -70.9649	return_mean:             -39.7072	return_std:                6.3603	target_mean:             -71.6873
+td_error_abs:              7.5697	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1225
+test_mind_dist__agent0_mean:  0.1106	test_mind_dist__agent1_mean:  0.0891	test_mind_dist__agent2_mean:  0.1677	test_return_mean:        -44.0343
+test_return_std:          11.1926	weight_norm:              58.6595	
+[INFO 18:55:07] my_main t_env: 286025 / 310000
+[INFO 18:55:07] my_main Estimated time left: 10 minutes, 18 seconds. Time passed: 2 hours, 4 minutes, 0 seconds
+[INFO 18:55:57] my_main Recent Stats | t_env:     288000 | Episode:    11520
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.2755	loss:                      0.1679
+min_dists_mean_mean:       0.0602	mind_dist__agent0_mean:    0.0569	mind_dist__agent1_mean:    0.0611	mind_dist__agent2_mean:    0.0627
+q_taken_mean:            -70.9128	return_mean:             -39.8933	return_std:                6.8091	target_mean:             -71.1794
+td_error_abs:              7.3069	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.1287
+test_mind_dist__agent0_mean:  0.1175	test_mind_dist__agent1_mean:  0.0974	test_mind_dist__agent2_mean:  0.1711	test_return_mean:        -44.1863
+test_return_std:          10.6658	weight_norm:              58.6766	
+[INFO 18:55:58] my_main t_env: 288025 / 310000
+[INFO 18:55:58] my_main Estimated time left: 9 minutes, 18 seconds. Time passed: 2 hours, 4 minutes, 51 seconds
+[INFO 18:56:48] my_main Recent Stats | t_env:     290000 | Episode:    11600
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.9994	loss:                      0.1831
+min_dists_mean_mean:       0.0602	mind_dist__agent0_mean:    0.0524	mind_dist__agent1_mean:    0.0677	mind_dist__agent2_mean:    0.0605
+q_taken_mean:            -71.7107	return_mean:             -40.0284	return_std:                6.9756	target_mean:             -71.6674
+td_error_abs:              7.6815	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.0890
+test_mind_dist__agent0_mean:  0.0580	test_mind_dist__agent1_mean:  0.0515	test_mind_dist__agent2_mean:  0.1576	test_return_mean:        -42.3332
+test_return_std:           8.5520	weight_norm:              58.6954	
+[INFO 18:56:49] my_main t_env: 290025 / 310000
+[INFO 18:56:49] my_main Estimated time left: 8 minutes, 30 seconds. Time passed: 2 hours, 5 minutes, 42 seconds
+[INFO 18:57:39] my_main Recent Stats | t_env:     292000 | Episode:    11680
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.5092	loss:                      0.1684
+min_dists_mean_mean:       0.0669	mind_dist__agent0_mean:    0.0489	mind_dist__agent1_mean:    0.0798	mind_dist__agent2_mean:    0.0721
+q_taken_mean:            -71.6934	return_mean:             -39.8046	return_std:                7.0394	target_mean:             -71.4382
+td_error_abs:              7.4067	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.0597
+test_mind_dist__agent0_mean:  0.0493	test_mind_dist__agent1_mean:  0.0483	test_mind_dist__agent2_mean:  0.0816	test_return_mean:        -41.0627
+test_return_std:           6.8289	weight_norm:              58.7127	
+[INFO 18:57:40] my_main t_env: 292025 / 310000
+[INFO 18:57:40] my_main Estimated time left: 7 minutes, 38 seconds. Time passed: 2 hours, 6 minutes, 33 seconds
+[INFO 18:58:30] my_main Recent Stats | t_env:     294000 | Episode:    11760
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.0874	loss:                      0.1445
+min_dists_mean_mean:       0.0656	mind_dist__agent0_mean:    0.0498	mind_dist__agent1_mean:    0.0813	mind_dist__agent2_mean:    0.0657
+q_taken_mean:            -71.1437	return_mean:             -39.8456	return_std:                7.2103	target_mean:             -70.5954
+td_error_abs:              6.9772	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.0544
+test_mind_dist__agent0_mean:  0.0479	test_mind_dist__agent1_mean:  0.0530	test_mind_dist__agent2_mean:  0.0624	test_return_mean:        -40.5740
+test_return_std:           6.4481	weight_norm:              58.7304	
+[INFO 18:58:31] my_main t_env: 294025 / 310000
+[INFO 18:58:31] my_main Estimated time left: 6 minutes, 45 seconds. Time passed: 2 hours, 7 minutes, 24 seconds
+[INFO 18:59:22] my_main Recent Stats | t_env:     296000 | Episode:    11840
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.2692	loss:                      0.1513
+min_dists_mean_mean:       0.0651	mind_dist__agent0_mean:    0.0570	mind_dist__agent1_mean:    0.0728	mind_dist__agent2_mean:    0.0655
+q_taken_mean:            -71.7409	return_mean:             -39.7422	return_std:                7.3092	target_mean:             -70.9899
+td_error_abs:              7.1084	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.0483
+test_mind_dist__agent0_mean:  0.0433	test_mind_dist__agent1_mean:  0.0518	test_mind_dist__agent2_mean:  0.0500	test_return_mean:        -38.2485
+test_return_std:           4.0557	weight_norm:              58.7487	
+[INFO 18:59:22] my_main t_env: 296025 / 310000
+[INFO 18:59:22] my_main Estimated time left: 5 minutes, 58 seconds. Time passed: 2 hours, 8 minutes, 15 seconds
+[INFO 19:00:13] my_main Recent Stats | t_env:     298000 | Episode:    11920
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.5646	loss:                      0.1774
+min_dists_mean_mean:       0.0663	mind_dist__agent0_mean:    0.0582	mind_dist__agent1_mean:    0.0752	mind_dist__agent2_mean:    0.0656
+q_taken_mean:            -72.7245	return_mean:             -39.6324	return_std:                7.2833	target_mean:             -72.3380
+td_error_abs:              7.5906	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.0759
+test_mind_dist__agent0_mean:  0.0928	test_mind_dist__agent1_mean:  0.0860	test_mind_dist__agent2_mean:  0.0488	test_return_mean:        -38.8602
+test_return_std:           4.7175	weight_norm:              58.7667	
+[INFO 19:00:13] my_main t_env: 298025 / 310000
+[INFO 19:00:13] my_main Estimated time left: 5 minutes, 5 seconds. Time passed: 2 hours, 9 minutes, 6 seconds
+[INFO 19:01:03] my_main Recent Stats | t_env:     300000 | Episode:    12000
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.2790	loss:                      0.1673
+min_dists_mean_mean:       0.0672	mind_dist__agent0_mean:    0.0604	mind_dist__agent1_mean:    0.0762	mind_dist__agent2_mean:    0.0650
+q_taken_mean:            -71.9754	return_mean:             -39.7132	return_std:                7.2106	target_mean:             -71.6209
+td_error_abs:              7.4242	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.0760
+test_mind_dist__agent0_mean:  0.0897	test_mind_dist__agent1_mean:  0.0909	test_mind_dist__agent2_mean:  0.0473	test_return_mean:        -39.1282
+test_return_std:           5.1526	weight_norm:              58.7829	
+[INFO 19:01:04] my_main t_env: 300025 / 310000
+[INFO 19:01:04] my_main Estimated time left: 4 minutes, 13 seconds. Time passed: 2 hours, 9 minutes, 57 seconds
+[INFO 19:01:55] my_main Recent Stats | t_env:     302000 | Episode:    12080
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.4315	loss:                      0.1683
+min_dists_mean_mean:       0.0622	mind_dist__agent0_mean:    0.0654	mind_dist__agent1_mean:    0.0639	mind_dist__agent2_mean:    0.0574
+q_taken_mean:            -71.3391	return_mean:             -39.5520	return_std:                7.1005	target_mean:             -71.1133
+td_error_abs:              7.4476	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.0744
+test_mind_dist__agent0_mean:  0.0888	test_mind_dist__agent1_mean:  0.0880	test_mind_dist__agent2_mean:  0.0464	test_return_mean:        -38.5104
+test_return_std:           5.0834	weight_norm:              58.8000	
+[INFO 19:01:55] my_main t_env: 302025 / 310000
+[INFO 19:01:55] my_main Estimated time left: 3 minutes, 24 seconds. Time passed: 2 hours, 10 minutes, 48 seconds
+[INFO 19:02:46] my_main Recent Stats | t_env:     304000 | Episode:    12160
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.9901	loss:                      0.1789
+min_dists_mean_mean:       0.0676	mind_dist__agent0_mean:    0.0650	mind_dist__agent1_mean:    0.0723	mind_dist__agent2_mean:    0.0656
+q_taken_mean:            -71.1134	return_mean:             -39.4478	return_std:                7.0666	target_mean:             -71.3557
+td_error_abs:              7.6464	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.0734
+test_mind_dist__agent0_mean:  0.0865	test_mind_dist__agent1_mean:  0.0858	test_mind_dist__agent2_mean:  0.0480	test_return_mean:        -40.0209
+test_return_std:           6.5727	weight_norm:              58.8161	
+[INFO 19:02:47] my_main t_env: 304025 / 310000
+[INFO 19:02:47] my_main Estimated time left: 2 minutes, 32 seconds. Time passed: 2 hours, 11 minutes, 39 seconds
+[INFO 19:03:37] my_main Recent Stats | t_env:     306000 | Episode:    12240
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.7616	loss:                      0.1685
+min_dists_mean_mean:       0.0695	mind_dist__agent0_mean:    0.0593	mind_dist__agent1_mean:    0.0737	mind_dist__agent2_mean:    0.0754
+q_taken_mean:            -69.5936	return_mean:             -39.4235	return_std:                6.9595	target_mean:             -70.1156
+td_error_abs:              7.3652	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.0784
+test_mind_dist__agent0_mean:  0.0854	test_mind_dist__agent1_mean:  0.0882	test_mind_dist__agent2_mean:  0.0616	test_return_mean:        -42.1438
+test_return_std:          10.3924	weight_norm:              58.8309	
+[INFO 19:03:37] my_main t_env: 306025 / 310000
+[INFO 19:03:37] my_main Estimated time left: 1 minutes, 41 seconds. Time passed: 2 hours, 12 minutes, 30 seconds
+[INFO 19:04:28] my_main Recent Stats | t_env:     308000 | Episode:    12320
+ep_length_mean:           25.0000	episode_limit_mean:        1.0000	grad_norm:                 2.4659	loss:                      0.1470
+min_dists_mean_mean:       0.0620	mind_dist__agent0_mean:    0.0560	mind_dist__agent1_mean:    0.0650	mind_dist__agent2_mean:    0.0649
+q_taken_mean:            -69.1488	return_mean:             -39.1864	return_std:                6.3619	target_mean:             -69.3492
+td_error_abs:              6.9956	test_ep_length_mean:      25.0000	test_episode_limit_mean:   1.0000	test_min_dists_mean_mean:  0.0573
+test_mind_dist__agent0_mean:  0.0266	test_mind_dist__agent1_mean:  0.0859	test_mind_dist__agent2_mean:  0.0593	test_return_mean:        -41.1891
+test_return_std:          10.1703	weight_norm:              58.8469	
+[INFO 19:04:28] my_main t_env: 308025 / 310000
+[INFO 19:04:28] my_main Estimated time left: 50 seconds. Time passed: 2 hours, 13 minutes, 21 seconds

@@ -1,0 +1,158 @@
+{
+  "ep_length_mean": [
+    25.0
+  ],
+  "ep_length_mean_T": [
+    25
+  ],
+  "episode_limit_mean": [
+    1.0
+  ],
+  "episode_limit_mean_T": [
+    25
+  ],
+  "min_dists_mean_mean": [
+    1.6430425047136583
+  ],
+  "min_dists_mean_mean_T": [
+    25
+  ],
+  "mind_dist__agent0_mean": [
+    1.9058499326194138
+  ],
+  "mind_dist__agent0_mean_T": [
+    25
+  ],
+  "mind_dist__agent1_mean": [
+    2.5874896235852036
+  ],
+  "mind_dist__agent1_mean_T": [
+    25
+  ],
+  "mind_dist__agent2_mean": [
+    1.7639431966977528
+  ],
+  "mind_dist__agent2_mean_T": [
+    25
+  ],
+  "mind_dist__agent3_mean": [
+    1.623813933838478
+  ],
+  "mind_dist__agent3_mean_T": [
+    25
+  ],
+  "mind_dist__agent4_mean": [
+    1.4769921319114934
+  ],
+  "mind_dist__agent4_mean_T": [
+    25
+  ],
+  "mind_dist__agent5_mean": [
+    2.362536460467136
+  ],
+  "mind_dist__agent5_mean_T": [
+    25
+  ],
+  "mind_dist__agent6_mean": [
+    0.450934600623895
+  ],
+  "mind_dist__agent6_mean_T": [
+    25
+  ],
+  "mind_dist__agent7_mean": [
+    0.9727801579658926
+  ],
+  "mind_dist__agent7_mean_T": [
+    25
+  ],
+  "return_mean": [
+    0.0
+  ],
+  "return_mean_T": [
+    25
+  ],
+  "return_std": [
+    0.0
+  ],
+  "return_std_T": [
+    25
+  ],
+  "test_ep_length_mean": [
+    25.0
+  ],
+  "test_ep_length_mean_T": [
+    25
+  ],
+  "test_episode_limit_mean": [
+    1.0
+  ],
+  "test_episode_limit_mean_T": [
+    25
+  ],
+  "test_min_dists_mean_mean": [
+    1.7520447295220483
+  ],
+  "test_min_dists_mean_mean_T": [
+    25
+  ],
+  "test_mind_dist__agent0_mean": [
+    2.1501086921568997
+  ],
+  "test_mind_dist__agent0_mean_T": [
+    25
+  ],
+  "test_mind_dist__agent1_mean": [
+    1.7033442765143565
+  ],
+  "test_mind_dist__agent1_mean_T": [
+    25
+  ],
+  "test_mind_dist__agent2_mean": [
+    2.01127576211074
+  ],
+  "test_mind_dist__agent2_mean_T": [
+    25
+  ],
+  "test_mind_dist__agent3_mean": [
+    2.493329372899551
+  ],
+  "test_mind_dist__agent3_mean_T": [
+    25
+  ],
+  "test_mind_dist__agent4_mean": [
+    2.29683339534093
+  ],
+  "test_mind_dist__agent4_mean_T": [
+    25
+  ],
+  "test_mind_dist__agent5_mean": [
+    1.9648904102775926
+  ],
+  "test_mind_dist__agent5_mean_T": [
+    25
+  ],
+  "test_mind_dist__agent6_mean": [
+    0.7677254724880708
+  ],
+  "test_mind_dist__agent6_mean_T": [
+    25
+  ],
+  "test_mind_dist__agent7_mean": [
+    0.6288504543882455
+  ],
+  "test_mind_dist__agent7_mean_T": [
+    25
+  ],
+  "test_return_mean": [
+    5.0
+  ],
+  "test_return_mean_T": [
+    25
+  ],
+  "test_return_std": [
+    12.041594578792296
+  ],
+  "test_return_std_T": [
+    25
+  ]
+}

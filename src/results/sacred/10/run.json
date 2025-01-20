@@ -1,0 +1,95 @@
+{
+  "artifacts": [],
+  "command": "my_main",
+  "experiment": {
+    "base_dir": "/home/wangdongzi/Desktop/RDHNet/RDHNet_revise/RDHNet_0114/src",
+    "dependencies": [
+      "munch==2.3.2",
+      "numpy==1.21.6",
+      "PyYAML==5.3.1",
+      "sacred==0.8.0",
+      "torch==1.13.1+cu117",
+      "wandb==0.12.11"
+    ],
+    "mainfile": "main.py",
+    "name": "pymarl",
+    "repositories": [],
+    "sources": [
+      [
+        "main.py",
+        "_sources/main_1381706ff3f27d4a229912948e0f110f.py"
+      ],
+      [
+        "run.py",
+        "_sources/run_bcdd0518140b627ad863f6a404a454c2.py"
+      ],
+      [
+        "utils/__init__.py",
+        "_sources/__init___d41d8cd98f00b204e9800998ecf8427e.py"
+      ],
+      [
+        "utils/logging.py",
+        "_sources/logging_64fecdd27b52d8992bc4c8cebec9933f.py"
+      ]
+    ]
+  },
+  "heartbeat": "2025-01-15T01:45:13.430518",
+  "host": {
+    "ENV": {},
+    "cpu": "AMD Ryzen 9 5950X 16-Core Processor",
+    "gpus": {
+      "driver_version": "535.113.01",
+      "gpus": [
+        {
+          "model": "NVIDIA GeForce RTX 3090",
+          "persistence_mode": false,
+          "total_memory": 24576
+        }
+      ]
+    },
+    "hostname": "RLer",
+    "os": [
+      "Linux",
+      "Linux-6.5.0-27-generic-x86_64-with-debian-trixie-sid"
+    ],
+    "python_version": "3.7.12"
+  },
+  "meta": {
+    "command": "my_main",
+    "options": {
+      "--beat-interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print-config": false,
+      "--priority": null,
+      "--queue": false,
+      "--s3": null,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserve": false,
+      "COMMAND": null,
+      "UPDATE": [
+        "env_args.scenario_name=simple_spread_3a",
+        "t_max=2000000",
+        "seed=0",
+        "use_wandb=False"
+      ],
+      "help": false,
+      "with": true
+    }
+  },
+  "resources": [],
+  "result": null,
+  "start_time": "2025-01-15T01:43:47.494845",
+  "status": "INTERRUPTED",
+  "stop_time": "2025-01-15T01:45:13.432751"
+}

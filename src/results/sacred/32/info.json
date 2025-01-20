@@ -1,0 +1,98 @@
+{
+  "ep_length_mean": [
+    25.0
+  ],
+  "ep_length_mean_T": [
+    25
+  ],
+  "episode_limit_mean": [
+    1.0
+  ],
+  "episode_limit_mean_T": [
+    25
+  ],
+  "min_dists_mean_mean": [
+    1.4445703396972427
+  ],
+  "min_dists_mean_mean_T": [
+    25
+  ],
+  "mind_dist__agent0_mean": [
+    1.0123944538665435
+  ],
+  "mind_dist__agent0_mean_T": [
+    25
+  ],
+  "mind_dist__agent1_mean": [
+    2.0933619501473246
+  ],
+  "mind_dist__agent1_mean_T": [
+    25
+  ],
+  "mind_dist__agent2_mean": [
+    1.2279546150778602
+  ],
+  "mind_dist__agent2_mean_T": [
+    25
+  ],
+  "return_mean": [
+    -88.4006187491427
+  ],
+  "return_mean_T": [
+    25
+  ],
+  "return_std": [
+    0.0
+  ],
+  "return_std_T": [
+    25
+  ],
+  "test_ep_length_mean": [
+    25.0
+  ],
+  "test_ep_length_mean_T": [
+    25
+  ],
+  "test_episode_limit_mean": [
+    1.0
+  ],
+  "test_episode_limit_mean_T": [
+    25
+  ],
+  "test_min_dists_mean_mean": [
+    1.2472321756088258
+  ],
+  "test_min_dists_mean_mean_T": [
+    25
+  ],
+  "test_mind_dist__agent0_mean": [
+    1.1109894261844073
+  ],
+  "test_mind_dist__agent0_mean_T": [
+    25
+  ],
+  "test_mind_dist__agent1_mean": [
+    1.2098776523278012
+  ],
+  "test_mind_dist__agent1_mean_T": [
+    25
+  ],
+  "test_mind_dist__agent2_mean": [
+    1.4208294483142687
+  ],
+  "test_mind_dist__agent2_mean_T": [
+    25
+  ],
+  "test_return_mean": [
+    -88.05549227464688
+  ],
+  "test_return_mean_T": [
+    25
+  ],
+  "test_return_std": [
+    13.64507208885895
+  ],
+  "test_return_std_T": [
+    25
+  ]
+}

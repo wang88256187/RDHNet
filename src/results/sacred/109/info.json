@@ -1,0 +1,259 @@
+{
+  "ep_length_mean": [
+    25.0
+  ],
+  "ep_length_mean_T": [
+    25
+  ],
+  "episode_limit_mean": [
+    1.0
+  ],
+  "episode_limit_mean_T": [
+    25
+  ],
+  "grad_norm": [
+    {
+      "py/reduce": [
+        {
+          "py/function": "torch._utils._rebuild_tensor_v2"
+        },
+        {
+          "py/tuple": [
+            {
+              "py/reduce": [
+                {
+                  "py/function": "torch.storage._load_from_bytes"
+                },
+                {
+                  "py/tuple": [
+                    {
+                      "py/b64": "gAKKCmz8nEb5IGqoUBkugAJN6QMugAJ9cQAoWBAAAABwcm90b2NvbF92ZXJzaW9ucQFN6QNYDQAA\nAGxpdHRsZV9lbmRpYW5xAohYCgAAAHR5cGVfc2l6ZXNxA31xBChYBQAAAHNob3J0cQVLAlgDAAAA\naW50cQZLBFgEAAAAbG9uZ3EHSwR1dS6AAihYBwAAAHN0b3JhZ2VxAGN0b3JjaApGbG9hdFN0b3Jh\nZ2UKcQFYDgAAADk0Nzg1NDAxMzAwNjA4cQJYBgAAAGN1ZGE6MHEDSwFOdHEEUS6AAl1xAFgOAAAA\nOTQ3ODU0MDEzMDA2MDhxAWEuAQAAAAAAAADmrxxE\n"
+                    }
+                  ]
+                },
+                null,
+                null,
+                null
+              ]
+            },
+            0,
+            {
+              "py/tuple": []
+            },
+            {
+              "py/tuple": []
+            },
+            false,
+            {
+              "py/reduce": [
+                {
+                  "py/type": "collections.OrderedDict"
+                },
+                {
+                  "py/tuple": []
+                },
+                null,
+                null,
+                {
+                  "py/tuple": []
+                }
+              ]
+            }
+          ]
+        },
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "grad_norm_T": [
+    800
+  ],
+  "loss": [
+    24.317489624023438
+  ],
+  "loss_T": [
+    800
+  ],
+  "min_dists_mean_mean": [
+    0.9221149122359777
+  ],
+  "min_dists_mean_mean_T": [
+    25
+  ],
+  "mind_dist__agent0_mean": [
+    1.5786468288291724
+  ],
+  "mind_dist__agent0_mean_T": [
+    25
+  ],
+  "mind_dist__agent1_mean": [
+    0.6092121265657461
+  ],
+  "mind_dist__agent1_mean_T": [
+    25
+  ],
+  "mind_dist__agent2_mean": [
+    1.6039874793781066
+  ],
+  "mind_dist__agent2_mean_T": [
+    25
+  ],
+  "mind_dist__agent3_mean": [
+    0.09417701422394328
+  ],
+  "mind_dist__agent3_mean_T": [
+    25
+  ],
+  "mind_dist__agent4_mean": [
+    1.624438736251907
+  ],
+  "mind_dist__agent4_mean_T": [
+    25
+  ],
+  "mind_dist__agent5_mean": [
+    0.71945791441042
+  ],
+  "mind_dist__agent5_mean_T": [
+    25
+  ],
+  "mind_dist__agent6_mean": [
+    0.10183676879364408
+  ],
+  "mind_dist__agent6_mean_T": [
+    25
+  ],
+  "mind_dist__agent7_mean": [
+    0.8230010959922502
+  ],
+  "mind_dist__agent7_mean_T": [
+    25
+  ],
+  "mind_dist__agent8_mean": [
+    1.14427624567861
+  ],
+  "mind_dist__agent8_mean_T": [
+    25
+  ],
+  "q_taken_mean": [
+    -7.448755052354601
+  ],
+  "q_taken_mean_T": [
+    800
+  ],
+  "return_mean": [
+    -101.13132922052526
+  ],
+  "return_mean_T": [
+    25
+  ],
+  "return_std": [
+    0.0
+  ],
+  "return_std_T": [
+    25
+  ],
+  "target_mean": [
+    -20.662567138671875
+  ],
+  "target_mean_T": [
+    800
+  ],
+  "td_error_abs": [
+    118.92428588867188
+  ],
+  "td_error_abs_T": [
+    800
+  ],
+  "test_ep_length_mean": [
+    25.0
+  ],
+  "test_ep_length_mean_T": [
+    25
+  ],
+  "test_episode_limit_mean": [
+    1.0
+  ],
+  "test_episode_limit_mean_T": [
+    25
+  ],
+  "test_min_dists_mean_mean": [
+    0.678302119425537
+  ],
+  "test_min_dists_mean_mean_T": [
+    25
+  ],
+  "test_mind_dist__agent0_mean": [
+    0.3902519569008002
+  ],
+  "test_mind_dist__agent0_mean_T": [
+    25
+  ],
+  "test_mind_dist__agent1_mean": [
+    0.6692421781039897
+  ],
+  "test_mind_dist__agent1_mean_T": [
+    25
+  ],
+  "test_mind_dist__agent2_mean": [
+    1.0842088066889883
+  ],
+  "test_mind_dist__agent2_mean_T": [
+    25
+  ],
+  "test_mind_dist__agent3_mean": [
+    0.5434435105309415
+  ],
+  "test_mind_dist__agent3_mean_T": [
+    25
+  ],
+  "test_mind_dist__agent4_mean": [
+    0.6740251832877872
+  ],
+  "test_mind_dist__agent4_mean_T": [
+    25
+  ],
+  "test_mind_dist__agent5_mean": [
+    0.8126215984237998
+  ],
+  "test_mind_dist__agent5_mean_T": [
+    25
+  ],
+  "test_mind_dist__agent6_mean": [
+    0.6366827289810564
+  ],
+  "test_mind_dist__agent6_mean_T": [
+    25
+  ],
+  "test_mind_dist__agent7_mean": [
+    0.676590732479652
+  ],
+  "test_mind_dist__agent7_mean_T": [
+    25
+  ],
+  "test_mind_dist__agent8_mean": [
+    0.617652379432817
+  ],
+  "test_mind_dist__agent8_mean_T": [
+    25
+  ],
+  "test_return_mean": [
+    -122.46436186148904
+  ],
+  "test_return_mean_T": [
+    25
+  ],
+  "test_return_std": [
+    12.41968238318814
+  ],
+  "test_return_std_T": [
+    25
+  ],
+  "weight_norm": [
+    57.26789093017578
+  ],
+  "weight_norm_T": [
+    800
+  ]
+}

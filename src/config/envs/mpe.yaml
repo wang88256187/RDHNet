@@ -1,0 +1,7 @@
+env: "mpe"
+
+env_args:
+  benchmark: False
+  episode_limit: 25
+  scenario_name: "simple_spread"
+

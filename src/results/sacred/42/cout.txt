@@ -1,0 +1,118 @@
+[INFO 11:31:30] pymarl Running command 'my_main'
+[INFO 11:31:30] pymarl Started run with ID "42"
+[DEBUG 11:31:30] pymarl Starting Heartbeat
+[DEBUG 11:31:30] my_main Started
+[INFO 11:31:30] my_main Experiment Parameters:
+[INFO 11:31:30] my_main 
+
+{   'act_noise': 0.1,
+    'action_range': None,
+    'action_selector': None,
+    'agent': 'rdhnet',
+    'agent_output_type': 'q',
+    'agent_view_radius': 1.5,
+    'batch_size': 32,
+    'batch_size_run': 1,
+    'buffer_algo': None,
+    'buffer_chunk_size': None,
+    'buffer_cpu_only': True,
+    'buffer_device': None,
+    'buffer_mode': 'transitions',
+    'buffer_size': 5000,
+    'buffer_warmup': 0,
+    'checkpoint_path': '',
+    'continuous_actions': False,
+    'critic_lr': None,
+    'debug': False,
+    'double_q': False,
+    'env': 'mpe',
+    'env_args': {   'benchmark': False,
+                    'episode_limit': 25,
+                    'scenario_name': 'simple_spread_3a',
+                    'seed': 0},
+    'epsilon_anneal_time': None,
+    'epsilon_decay_mode': None,
+    'epsilon_finish': None,
+    'epsilon_start': None,
+    'evaluate': False,
+    'exploration_mode': 'gaussian',
+    'final_ou_noise_scale': 0.0,
+    'gamma': 0.85,
+    'gated': False,
+    'grad_norm_clip': 0.5,
+    'hyper_initialization_nonzeros': 0,
+    'hypernet_embed': 64,
+    'hypernet_layers': 2,
+    'label': 'default_label',
+    'learn_interval': 100,
+    'learner': 'cq_learner',
+    'learner_log_interval': 2000,
+    'load_step': 0,
+    'local_results_path': 'results',
+    'log_interval': 2000,
+    'lr': 0.01,
+    'mac': 'cqmix_mac',
+    'max_nums_refer_agent': 3,
+    'mixer': 'qmix',
+    'mixing_embed_dim': 64,
+    'n_runners': None,
+    'n_train': 1,
+    'name': 'rdhnet_pp',
+    'obs_agent_id': False,
+    'obs_last_action': False,
+    'optim_alpha': 0.99,
+    'optim_eps': 1e-05,
+    'optimizer': 'adam',
+    'optimizer_epsilon': 0.01,
+    'ou_noise_scale': 0.3,
+    'ou_sigma': 0.2,
+    'ou_stop_episode': 100,
+    'ou_theta': 0.15,
+    'plot_loss_network': False,
+    'recurrent_critic': False,
+    'repeat_id': 1,
+    'rnn_hidden_dim': 64,
+    'run_mode': None,
+    'runner': 'episode',
+    'runner_log_interval': 2000,
+    'runner_scope': 'episodic',
+    'save_model': False,
+    'save_model_interval': 10000,
+    'save_replay': False,
+    'seed': 0,
+    'skip_connections': False,
+    'start_steps': 0,
+    't_max': 500000,
+    'target_update_interval': 200,
+    'target_update_mode': 'soft',
+    'target_update_tau': 0.001,
+    'test_greedy': True,
+    'test_interval': 2000,
+    'test_nepisode': 10,
+    'testing_on': True,
+    'use_buffer_compression': False,
+    'use_cuda': True,
+    'use_tensorboard': False,
+    'use_wandb': False,
+    'user_name': 'dongzi',
+    'verbose': False,
+    'weight_decay': True,
+    'weight_decay_factor': 0.0001}
+
+/home/wangdongzi/miniconda3/envs/marl/lib/python3.7/site-packages/matplotlib/__init__.py:886: MatplotlibDeprecationWarning: 
+examples.directory is deprecated; in the future, examples will be found relative to the 'datapath' directory.
+  "found relative to the 'datapath' directory.".format(key))
+[DEBUG 11:31:31] matplotlib CACHEDIR=/home/wangdongzi/.cache/matplotlib
+[DEBUG 11:31:31] matplotlib.font_manager Using fontManager instance from /home/wangdongzi/.cache/matplotlib/fontlist-v300.json
+[DEBUG 11:31:31] matplotlib.pyplot Loaded backend module://backend_interagg version unknown.
+[33mWARN: gym.spaces.Box autodetected dtype as <class 'numpy.float32'>. Please provide explicit dtype.[0m
+[33mWARN: gym.spaces.Box autodetected dtype as <class 'numpy.float32'>. Please provide explicit dtype.[0m
+[33mWARN: gym.spaces.Box autodetected dtype as <class 'numpy.float32'>. Please provide explicit dtype.[0m
+[33mWARN: gym.spaces.Box autodetected dtype as <class 'numpy.float32'>. Please provide explicit dtype.[0m
+[33mWARN: gym.spaces.Box autodetected dtype as <class 'numpy.float32'>. Please provide explicit dtype.[0m
+[33mWARN: gym.spaces.Box autodetected dtype as <class 'numpy.float32'>. Please provide explicit dtype.[0m
+[INFO 11:31:32] my_main Beginning training for 500000 timesteps
+/home/wangdongzi/Desktop/RDHNet/RDHNet_revise/RDHNet_0114/src/components/episode_buffer.py:111: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  v = th.tensor(v, dtype=dtype, device=self.device)
+[INFO 11:31:49] my_main t_env: 25 / 500000
+[INFO 11:31:49] my_main Estimated time left: 1 hours, 9 minutes, 48 seconds. Time passed: 16 seconds

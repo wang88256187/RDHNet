@@ -1,0 +1,117 @@
+{
+  "artifacts": [],
+  "command": "my_main",
+  "experiment": {
+    "base_dir": "/home/wangdongzi/Desktop/RDHNet/RDHNet_revise/RDHNet_0116/src",
+    "dependencies": [
+      "munch==2.3.2",
+      "numpy==1.21.6",
+      "PyYAML==5.3.1",
+      "sacred==0.8.0",
+      "torch==1.13.1+cu117",
+      "wandb==0.12.11"
+    ],
+    "mainfile": "main.py",
+    "name": "pymarl",
+    "repositories": [],
+    "sources": [
+      [
+        "main.py",
+        "_sources/main_1381706ff3f27d4a229912948e0f110f.py"
+      ],
+      [
+        "run.py",
+        "_sources/run_bcdd0518140b627ad863f6a404a454c2.py"
+      ],
+      [
+        "utils/__init__.py",
+        "_sources/__init___d41d8cd98f00b204e9800998ecf8427e.py"
+      ],
+      [
+        "utils/logging.py",
+        "_sources/logging_8944a46c694f5f9eb6e83dd833771e72.py"
+      ]
+    ]
+  },
+  "fail_trace": [
+    "Traceback (most recent call last):\n",
+    "  File \"/home/wangdongzi/miniconda3/envs/marl/lib/python3.7/site-packages/sacred/stdout_capturing.py\", line 163, in tee_output_fd\n    yield out  # let the caller do their printing\n",
+    "  File \"/home/wangdongzi/miniconda3/envs/marl/lib/python3.7/site-packages/sacred/run.py\", line 238, in __call__\n    self.result = self.main_function(*args)\n",
+    "  File \"/home/wangdongzi/miniconda3/envs/marl/lib/python3.7/site-packages/wrapt/wrappers.py\", line 567, in __call__\n    args, kwargs)\n",
+    "  File \"/home/wangdongzi/miniconda3/envs/marl/lib/python3.7/site-packages/sacred/config/captured_function.py\", line 42, in captured_function\n    result = wrapped(*args, **kwargs)\n",
+    "  File \"/home/wangdongzi/Desktop/RDHNet/RDHNet_revise/RDHNet_0116/src/main.py\", line 39, in my_main\n    run(_run, config, _log)\n",
+    "  File \"/home/wangdongzi/Desktop/RDHNet/RDHNet_revise/RDHNet_0116/src/run.py\", line 51, in run\n    logger.setup_wandb(args, wandb_logs_dir, unique_token)\n",
+    "  File \"/home/wangdongzi/Desktop/RDHNet/RDHNet_revise/RDHNet_0116/src/utils/logging.py\", line 57, in setup_wandb\n    reinit=True)\n",
+    "  File \"/home/wangdongzi/miniconda3/envs/marl/lib/python3.7/site-packages/wandb/sdk/wandb_init.py\", line 954, in init\n    run = wi.init()\n",
+    "  File \"/home/wangdongzi/miniconda3/envs/marl/lib/python3.7/site-packages/wandb/sdk/wandb_init.py\", line 616, in init\n    raise UsageError(error_message)\n",
+    "wandb.errors.UsageError: Error communicating with wandb process\ntry: wandb.init(settings=wandb.Settings(start_method='fork'))\nor:  wandb.init(settings=wandb.Settings(start_method='thread'))\nFor more info see: https://docs.wandb.ai/library/init#init-start-error\n",
+    "\nDuring handling of the above exception, another exception occurred:\n\n",
+    "Traceback (most recent call last):\n",
+    "  File \"/home/wangdongzi/miniconda3/envs/marl/lib/python3.7/contextlib.py\", line 130, in __exit__\n    self.gen.throw(type, value, traceback)\n",
+    "  File \"/home/wangdongzi/miniconda3/envs/marl/lib/python3.7/site-packages/sacred/stdout_capturing.py\", line 175, in tee_output_fd\n    tee_stdout.wait(timeout=1)\n",
+    "  File \"/home/wangdongzi/miniconda3/envs/marl/lib/python3.7/subprocess.py\", line 1019, in wait\n    return self._wait(timeout=timeout)\n",
+    "  File \"/home/wangdongzi/miniconda3/envs/marl/lib/python3.7/subprocess.py\", line 1645, in _wait\n    raise TimeoutExpired(self.args, timeout)\n",
+    "subprocess.TimeoutExpired: Command '['tee', '-a', '/tmp/tmpfms9hwh8']' timed out after 1 seconds\n"
+  ],
+  "heartbeat": "2025-01-16T08:42:16.023851",
+  "host": {
+    "ENV": {},
+    "cpu": "AMD Ryzen 9 5950X 16-Core Processor",
+    "gpus": {
+      "driver_version": "535.113.01",
+      "gpus": [
+        {
+          "model": "NVIDIA GeForce RTX 3090",
+          "persistence_mode": false,
+          "total_memory": 24576
+        }
+      ]
+    },
+    "hostname": "RLer",
+    "os": [
+      "Linux",
+      "Linux-6.5.0-27-generic-x86_64-with-debian-trixie-sid"
+    ],
+    "python_version": "3.7.12"
+  },
+  "meta": {
+    "command": "my_main",
+    "options": {
+      "--beat-interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print-config": false,
+      "--priority": null,
+      "--queue": false,
+      "--s3": null,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserve": false,
+      "COMMAND": null,
+      "UPDATE": [
+        "env_args.scenario_name=simple_spread_3a",
+        "t_max=310000",
+        "seed=0",
+        "use_wandb=True",
+        "max_nums_refer_agent=1",
+        "use_pomdp=True"
+      ],
+      "help": false,
+      "with": true
+    }
+  },
+  "resources": [],
+  "result": null,
+  "start_time": "2025-01-16T08:41:35.529233",
+  "status": "FAILED",
+  "stop_time": "2025-01-16T08:42:16.025275"
+}
